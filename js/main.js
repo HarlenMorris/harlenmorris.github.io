@@ -1,22 +1,13 @@
-// ── Demo URLs (update these when hosting goes live) ──
-const DEMO_URLS = {
-  glpi: 'http://136.116.109.190',
-  glpiAssets: 'http://136.116.109.190/front/computer.php',
-};
+// ── Demo URL ──
+const GLPI_URL = 'http://136.116.109.190';
 
-// Wire up demo buttons
+// Wire up demo button
 document.addEventListener('DOMContentLoaded', () => {
   const glpiLink = document.getElementById('glpi-link');
-  const assetsLink = document.getElementById('glpi-assets-link');
   if (glpiLink) {
-    glpiLink.href = DEMO_URLS.glpi;
+    glpiLink.href = GLPI_URL;
     glpiLink.target = '_blank';
     glpiLink.rel = 'noopener noreferrer';
-  }
-  if (assetsLink) {
-    assetsLink.href = DEMO_URLS.glpiAssets;
-    assetsLink.target = '_blank';
-    assetsLink.rel = 'noopener noreferrer';
   }
 });
 
@@ -54,7 +45,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
 );
 
-document.querySelectorAll('.demo-card, .article-card, .timeline-item, .skill-group, .contact-card, .highlight-card').forEach(el => {
+document.querySelectorAll('.demo-hero, .showcase-item, .article-card, .timeline-item, .skill-group, .contact-card, .highlight-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';

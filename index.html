@@ -102,62 +102,86 @@
   <!-- Live Demos -->
   <section class="section section-alt" id="demos">
     <div class="container">
-      <h2 class="section-title">Live Demos</h2>
+      <h2 class="section-title">Live Demo</h2>
       <p class="section-desc">
-        Working instances of the tools I use to manage IT infrastructure. Explore them to see
-        real workflows, sample data, and documentation in action.
+        A fully configured GLPI ITSM environment I built from scratch for a simulated healthcare organization.
+        Explore it live or browse the showcase below.
       </p>
-      <div class="demo-grid">
 
-        <!-- GLPI Demo — Ticketing & Help Desk -->
-        <div class="demo-card">
-          <div class="demo-icon">🎫</div>
-          <h3>GLPI — Help Desk & Ticketing</h3>
-          <p class="demo-subtitle">ITSM · Ticket Lifecycle · SLA Tracking · Knowledge Base</p>
-          <div class="demo-screenshots">
-            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard — ticket metrics, asset counts, and SLA tracking" class="demo-img" loading="lazy">
-            <img src="img/screenshots/glpi-tickets-admin.png" alt="GLPI Ticket Queue — 28 healthcare IT tickets with priority and status" class="demo-img" loading="lazy">
+      <!-- Single GLPI Demo Card -->
+      <div class="demo-hero">
+        <div class="demo-hero-content">
+          <div class="demo-hero-text">
+            <div class="demo-icon-inline">🏥</div>
+            <h3>GLPI ITSM — Northwoods Health System</h3>
+            <p class="demo-subtitle">Help Desk · Asset Management · Knowledge Base · Compliance Workflows</p>
+            <p>
+              Complete IT Service Management platform built for a simulated multi-site healthcare organization
+              with 3 locations, 27 staff members, and 7 departments. Includes 42 realistic tickets across
+              the full lifecycle, 50+ tracked assets, software licensing, and an employee onboarding workflow
+              with multi-level approvals.
+            </p>
+            <div class="demo-launch">
+              <a href="#" class="btn btn-primary btn-lg" id="glpi-link">Launch Live Demo →</a>
+              <p class="demo-creds">Login: <code>guest</code> / <code>guest</code> — read-only access</p>
+            </div>
           </div>
-          <p>
-            Full IT Service Management platform for a simulated healthcare organization
-            ("Northwoods Health System" — 3 locations, 150 employees, 7 departments).
-            Demonstrates real-world help desk operations with 60+ tickets, automated workflows,
-            and HIPAA-focused knowledge base articles.
-          </p>
-          <ul class="demo-features">
-            <li>60+ tickets across Hardware, Software, Network, Access, and Security categories</li>
-            <li>Full lifecycle: New → Assigned → In Progress → Resolved → Closed</li>
-            <li>SLA definitions, priority matrix, and escalation rules</li>
-            <li>20 knowledge base articles covering common healthcare IT scenarios</li>
-            <li>Help desk metrics, reporting dashboard, and audit trail</li>
-          </ul>
-          <a href="#" class="btn btn-primary" id="glpi-link">Launch Live Demo →</a>
-          <p class="demo-creds">Guest Login: <code>guest</code> / <code>guest2026</code> (read-only access)</p>
+          <div class="demo-hero-img">
+            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard — ticket metrics, asset counts, and SLA tracking" class="demo-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Showcase Grid -->
+      <h3 class="showcase-title">What's Inside</h3>
+      <div class="showcase-grid">
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-tickets-admin.png" alt="GLPI Ticket Queue — healthcare IT tickets with priority and status" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Help Desk &amp; Ticketing</h4>
+            <p>42 tickets across Hardware, Software, Network, Access, and Security categories. Full lifecycle from New → Assigned → Solved → Closed, with SLA tracking and priority escalation.</p>
+          </div>
         </div>
 
-        <!-- GLPI Demo — Asset Management -->
-        <div class="demo-card">
-          <div class="demo-icon">🔧</div>
-          <h3>GLPI — IT Asset Management</h3>
-          <p class="demo-subtitle">ITAM · Inventory · Lifecycle Tracking · License Management</p>
-          <div class="demo-screenshots">
-            <img src="img/screenshots/glpi-computers.png" alt="GLPI Asset Inventory — 50 computers with specs, assignments, and lifecycle status" class="demo-img" loading="lazy">
-            <img src="img/screenshots/glpi-licenses.png" alt="GLPI Software License Management" class="demo-img" loading="lazy">
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-computers.png" alt="GLPI Asset Inventory — 50 computers with specs, assignments, and lifecycle status" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>IT Asset Management</h4>
+            <p>50+ computers, 12 monitors, printers, network gear, and mobile devices — all tracked with specs, assignments, warranty dates, and lifecycle status across 3 locations.</p>
           </div>
-          <p>
-            Same GLPI platform, full asset management module. Tracks 50+ computers, 24 monitors,
-            network equipment, and 10 software titles across all Northwoods Health System locations.
-            Demonstrates end-to-end asset lifecycle from procurement to retirement.
-          </p>
-          <ul class="demo-features">
-            <li>50+ computers and 24 monitors with specs, assignments, and warranty dates</li>
-            <li>Software license tracking (Office 365, Adobe, antivirus, EHR systems)</li>
-            <li>Check-in/check-out workflows with user and department assignments</li>
-            <li>Maintenance scheduling, depreciation tracking, and disposal workflows</li>
-            <li>Asset reports, inventory audits, and location-based views</li>
-          </ul>
-          <a href="#" class="btn btn-primary" id="glpi-assets-link">Launch Live Demo →</a>
-          <p class="demo-creds">Guest Login: <code>guest</code> / <code>guest2026</code> — same environment, asset view</p>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-licenses.png" alt="GLPI Software License Management" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Software &amp; License Tracking</h4>
+            <p>10 software titles with license counts, assignments, and compliance tracking. Covers Office 365, EHR systems, antivirus, and healthcare-specific applications.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-kb-admin.png" alt="GLPI Knowledge Base articles" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Knowledge Base</h4>
+            <p>10 self-service articles covering password resets, VPN setup, phishing reporting, HIPAA guidelines, and common IT procedures — reducing ticket volume through documentation.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Reporting &amp; Metrics</h4>
+            <p>Built-in dashboards showing ticket volume, resolution times, asset distribution, and department workload — the data that drives IT operations decisions.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-assets.png" alt="GLPI network and peripheral equipment" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Employee Onboarding Workflow</h4>
+            <p>26-task, 4-phase onboarding ticket for a new clinical hire — covering account creation, equipment provisioning, compliance training, HIPAA certification, and 30-day follow-up.</p>
+          </div>
         </div>
 
       </div>
