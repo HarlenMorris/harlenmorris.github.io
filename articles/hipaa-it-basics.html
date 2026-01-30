@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIPAA Basics for IT Staff — IT Knowledge Base</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">HM</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#articles">← Back to Articles</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="container">
+      <div class="article-header">
+        <span class="article-tag">Compliance</span>
+        <h1>HIPAA Basics for IT Staff</h1>
+        <div class="article-meta">
+          <span>Last updated: January 2026</span>
+          <span>•</span>
+          <span>7 min read</span>
+          <span>•</span>
+          <span>Audience: IT Staff &amp; Administrators</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <div class="callout callout-danger">
+          <strong>⚖️ Legal Requirement:</strong> HIPAA compliance is not optional. Violations can result
+          in fines up to $1.9 million per violation category and potential criminal penalties. As IT staff,
+          you are a critical line of defense for patient data.
+        </div>
+
+        <h2>Overview</h2>
+        <p>
+          The Health Insurance Portability and Accountability Act (HIPAA) sets national standards
+          for protecting sensitive patient health information. As IT staff in a healthcare organization,
+          you handle systems that store, process, and transmit Protected Health Information (PHI) daily.
+          Understanding HIPAA's requirements isn't just compliance — it's patient safety.
+        </p>
+
+        <h2>Key HIPAA Rules for IT</h2>
+
+        <h3>The Privacy Rule</h3>
+        <p>Controls who can access PHI and how it's used. Key IT implications:</p>
+        <ul>
+          <li><strong>Minimum Necessary Standard:</strong> Only grant access to the minimum PHI needed for each role. Don't give everyone admin access "for convenience."</li>
+          <li><strong>Access controls:</strong> Role-based access in every system. Document who has access to what and why.</li>
+          <li><strong>Audit logs:</strong> Every system containing PHI must log who accessed what and when.</li>
+        </ul>
+
+        <h3>The Security Rule</h3>
+        <p>Requires safeguards for electronic PHI (ePHI). Three categories:</p>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">🔒</span>
+            <div>
+              <strong>Administrative Safeguards</strong>
+              <ul>
+                <li>Security awareness training (KnowBe4 — all staff, annually + new hire)</li>
+                <li>Risk assessments (annual, document findings and remediation)</li>
+                <li>Incident response plan (documented, tested, updated)</li>
+                <li>Business Associate Agreements (BAAs) with all vendors handling PHI</li>
+                <li>Workforce sanctions for policy violations</li>
+              </ul>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">🖥️</span>
+            <div>
+              <strong>Technical Safeguards</strong>
+              <ul>
+                <li><strong>Access control:</strong> Unique user IDs, role-based permissions, automatic logoff</li>
+                <li><strong>Encryption:</strong> ePHI encrypted at rest (AES-256) and in transit (TLS 1.2+)</li>
+                <li><strong>Audit controls:</strong> Logging of all access to systems containing ePHI</li>
+                <li><strong>Integrity controls:</strong> Mechanisms to prevent unauthorized alteration of ePHI</li>
+                <li><strong>Transmission security:</strong> VPN for remote access, encrypted email for PHI</li>
+              </ul>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">🏢</span>
+            <div>
+              <strong>Physical Safeguards</strong>
+              <ul>
+                <li>Server room access restricted (badge access, logs)</li>
+                <li>Workstation security (screen locks, privacy screens in clinical areas)</li>
+                <li>Device disposal (NIST 800-88 compliant wiping before recycling/disposal)</li>
+                <li>Asset tracking (Snipe-IT — know where every device with ePHI access is)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>The Breach Notification Rule</h3>
+        <p>When a breach occurs, specific notification timelines kick in:</p>
+        <ul>
+          <li><strong>Individual notification:</strong> Within 60 days of discovery</li>
+          <li><strong>HHS notification:</strong> Within 60 days (if 500+ individuals affected, immediate media notice too)</li>
+          <li><strong>IT's role:</strong> Detect, contain, investigate, and document the breach. Provide technical findings for the breach assessment.</li>
+        </ul>
+
+        <h2>IT Daily Operations: HIPAA Checklist</h2>
+
+        <h3>User Account Management</h3>
+        <ul>
+          <li>☐ New accounts: Minimum necessary access. Document role-based justification.</li>
+          <li>☐ Terminated employees: Disable accounts within 4 hours of termination notice.</li>
+          <li>☐ Transfers: Review and adjust access when employees change roles.</li>
+          <li>☐ Quarterly access reviews: Audit who has access to ePHI systems. Remove unnecessary access.</li>
+          <li>☐ Password policies: 12+ characters, 90-day rotation, MFA on all ePHI systems.</li>
+        </ul>
+
+        <h3>System Security</h3>
+        <ul>
+          <li>☐ Patch management: Apply critical security patches within 72 hours.</li>
+          <li>☐ Antivirus/EDR: Ensure all endpoints have current definitions.</li>
+          <li>☐ Encryption: Verify BitLocker (Windows) or FileVault (Mac) is enabled on all devices.</li>
+          <li>☐ Backups: Test backup restoration quarterly. Encrypt backup media.</li>
+          <li>☐ Firewall rules: Review and document. Remove unnecessary open ports.</li>
+        </ul>
+
+        <h3>Vendor Management</h3>
+        <ul>
+          <li>☐ BAAs: Every vendor that touches PHI must have a signed Business Associate Agreement.</li>
+          <li>☐ Cloud services: Verify HIPAA compliance (Google Workspace BAA, AWS BAA, etc.).</li>
+          <li>☐ Shadow IT: Watch for employees using unauthorized cloud services for PHI.</li>
+        </ul>
+
+        <h2>Common HIPAA Mistakes in IT</h2>
+
+        <div class="callout callout-warning">
+          <strong>⚠️ Avoid These:</strong>
+        </div>
+
+        <ul>
+          <li><strong>❌ Sharing login credentials:</strong> Every user must have a unique ID. "Shared" accounts eliminate audit trails.</li>
+          <li><strong>❌ Sending PHI via unencrypted email:</strong> Use the organization's encrypted email solution or secure file sharing.</li>
+          <li><strong>❌ Leaving screens unlocked:</strong> Enforce automatic screen lock (5 minutes max for workstations accessing ePHI).</li>
+          <li><strong>❌ No BAA with cloud vendors:</strong> Using Dropbox, personal Gmail, or other consumer services for PHI is a violation — even if "it's just one file."</li>
+          <li><strong>❌ Not logging access:</strong> If a system contains ePHI and doesn't have audit logging enabled, it's a compliance gap.</li>
+          <li><strong>❌ Delayed account deactivation:</strong> A terminated employee accessing systems is both a security risk and a HIPAA violation.</li>
+          <li><strong>❌ Improper device disposal:</strong> Throwing away a hard drive without proper wiping can result in a reportable breach.</li>
+        </ul>
+
+        <h2>Incident Response: What IT Does During a Breach</h2>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <strong>Contain</strong>
+              <p>Stop the breach. Disable compromised accounts, isolate affected systems, block malicious IPs. Document every action with timestamps.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <strong>Investigate</strong>
+              <p>Determine what happened, what data was affected, and how many individuals are impacted. Review logs, conduct forensics.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <strong>Assess</strong>
+              <p>Apply the four-factor breach assessment: (1) Nature of PHI involved, (2) Who accessed it, (3) Was PHI actually acquired/viewed, (4) Extent of risk mitigation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">4</span>
+            <div>
+              <strong>Notify</strong>
+              <p>Work with compliance and legal to determine notification requirements. Provide technical documentation for the breach report.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">5</span>
+            <div>
+              <strong>Remediate</strong>
+              <p>Fix the vulnerability that caused the breach. Update policies, retrain staff, implement additional safeguards. Document everything.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Quick Reference: PHI Identifiers</h2>
+        <p>HIPAA defines 18 identifiers that make health information "protected." IT systems must safeguard any data containing these:</p>
+        <ol>
+          <li>Name</li>
+          <li>Geographic data (address, ZIP code smaller than state)</li>
+          <li>Dates (birth, admission, discharge, death)</li>
+          <li>Phone numbers</li>
+          <li>Fax numbers</li>
+          <li>Email addresses</li>
+          <li>Social Security numbers</li>
+          <li>Medical record numbers</li>
+          <li>Health plan beneficiary numbers</li>
+          <li>Account numbers</li>
+          <li>Certificate/license numbers</li>
+          <li>Vehicle identifiers (VIN, plates)</li>
+          <li>Device identifiers (serial numbers)</li>
+          <li>Web URLs</li>
+          <li>IP addresses</li>
+          <li>Biometric identifiers</li>
+          <li>Full-face photographs</li>
+          <li>Any other unique identifying number</li>
+        </ol>
+
+        <div class="callout callout-success">
+          <strong>✅ Bottom Line:</strong> As IT staff, you're not just fixing computers — you're
+          protecting patients. Every access control you configure, every account you disable on time,
+          every encrypted connection you enforce keeps someone's medical history safe. That's the job.
+        </div>
+
+        <div class="article-footer">
+          <p><strong>Questions about HIPAA compliance?</strong> Contact IT Security or the Privacy Officer. For technical implementation questions, submit a ticket in GLPI under <em>Security → Compliance Question</em>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Harlen Morris. Sample IT Knowledge Base Article.</p>
+    </div>
+  </footer>
+</body>
+</html>
