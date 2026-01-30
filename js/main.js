@@ -1,5 +1,6 @@
-// ── Demo URL ──
+// ── Demo URLs ──
 const GLPI_URL = 'http://136.116.109.190';
+const BOOKSTACK_URL = 'http://136.116.109.190:8080';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -9,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     glpiLink.href = GLPI_URL;
     glpiLink.target = '_blank';
     glpiLink.rel = 'noopener noreferrer';
+  }
+
+  // ── Wire up BookStack demo button ──
+  const bookstackLink = document.getElementById('bookstack-link');
+  if (bookstackLink) {
+    bookstackLink.href = BOOKSTACK_URL;
+    bookstackLink.target = '_blank';
+    bookstackLink.rel = 'noopener noreferrer';
   }
 
   // ══════════════════════════════════════════
