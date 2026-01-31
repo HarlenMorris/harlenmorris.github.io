@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Operations Dashboard — Real-Time NOC Monitoring</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">HM</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#articles">← Back to Articles</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="container">
+      <div class="article-header">
+        <span class="article-tag">Live Demo</span>
+        <h1>IT Operations Dashboard — Real-Time NOC Monitoring</h1>
+        <div class="article-meta">
+          <span>Last updated: January 2026</span>
+          <span>•</span>
+          <span>12 min read</span>
+          <span>•</span>
+          <span>Audience: Healthcare IT Professionals &amp; Technical Hiring Managers</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <div class="callout callout-info">
+          <strong>🎯 Portfolio Project:</strong> This is a live, fully-functional IT Operations Dashboard built for "Northwoods Health System" (a fictional healthcare organization used for portfolio demonstrations). It pulls real data from a production GLPI ITSM instance via REST API and demonstrates practical Healthcare IT operational capabilities.
+        </div>
+
+        <h2>Project Overview</h2>
+        
+        <p>Healthcare IT operations require constant vigilance. Network Operations Centers (NOCs) monitor hundreds of systems, track incident response times, manage asset inventories, and ensure regulatory compliance—all while maintaining visibility across complex infrastructure.</p>
+
+        <p>This dashboard demonstrates my ability to build and deploy the kind of real-time monitoring tools that keep Healthcare IT operations running smoothly. It's not just a coding exercise—it's a working operations platform that pulls live data from a GLPI ITSM instance containing 44 realistic healthcare IT tickets, 140+ assets, and a complete employee onboarding workflow.</p>
+
+        <div class="callout callout-success">
+          <strong>✨ This is a live system.</strong> The dashboard auto-refreshes every 60 seconds, pulling real-time data from a GLPI instance at <code>136.116.109.190</code>. It includes realistic scenarios like Dr. Emily Sanchez's onboarding workflow, HIPAA-related incident tickets, and healthcare infrastructure asset tracking.
+        </div>
+
+        <h2>Why This Matters for Healthcare IT</h2>
+
+        <p>In Healthcare IT, operational visibility isn't optional—it's critical for patient safety and regulatory compliance. This dashboard demonstrates understanding of several Healthcare IT operational domains:</p>
+
+        <ul>
+          <li><strong>HIPAA-Aware Infrastructure Monitoring:</strong> Security incidents, privacy alerts, and compliance-sensitive system health tracking</li>
+          <li><strong>Incident Response Tracking:</strong> Priority-based ticket management with SLA awareness for critical healthcare systems</li>
+          <li><strong>Employee Lifecycle Management:</strong> Onboarding/offboarding workflows that ensure proper access provisioning and timely termination</li>
+          <li><strong>Asset Management:</strong> Medical device tracking, workstation inventory, and equipment lifecycle management</li>
+          <li><strong>SLA Compliance Monitoring:</strong> Service Level Agreement tracking for critical systems (EHR uptime, network availability, security response times)</li>
+        </ul>
+
+        <p>These aren't abstract concepts—they're daily operational requirements in Healthcare IT environments. This dashboard proves I can build tools to manage them.</p>
+
+        <h2>Technical Architecture</h2>
+
+        <h3>Tech Stack</h3>
+        <ul>
+          <li><strong>Backend:</strong> Python Flask (lightweight web framework)</li>
+          <li><strong>API Integration:</strong> GLPI REST API with custom <code>GLPIClient</code> class</li>
+          <li><strong>Data Visualization:</strong> Chart.js for real-time charts and metrics</li>
+          <li><strong>Frontend:</strong> Bootstrap 5 (responsive, mobile-ready design)</li>
+          <li><strong>Deployment:</strong> Docker containerized with Gunicorn WSGI server</li>
+          <li><strong>Web Server:</strong> Nginx reverse proxy (production-ready configuration)</li>
+        </ul>
+
+        <h3>Backend Architecture</h3>
+
+        <p>The Flask backend is built around a custom <code>GLPIClient</code> class that handles authentication, session management, and API communication with the GLPI instance. It exposes 7 REST API endpoints that power the dashboard:</p>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <strong>/api/priority-tickets</strong>
+              <p>Returns today's high-priority tickets with status, assigned tech, and time-to-close metrics. Filters tickets by urgency level and creation date.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <strong>/api/onboarding</strong>
+              <p>Tracks employee onboarding and offboarding workflows. Returns active workflows with completion percentage, assigned IT staff, and pending tasks. Currently tracking Dr. Emily Sanchez's onboarding with Google Workspace setup, equipment provisioning, and access grants.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <strong>/api/activity-feed</strong>
+              <p>Aggregates recent ticket activity (new tickets, status changes, assignments, resolutions) into a unified timeline. Provides real-time operational visibility across all IT service categories.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">4</span>
+            <div>
+              <strong>/api/security-alerts</strong>
+              <p>Filters security and incident tickets (HIPAA breaches, phishing attempts, unauthorized access). Includes severity classification and time-since-detection metrics.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">5</span>
+            <div>
+              <strong>/api/system-health</strong>
+              <p>Monitors infrastructure health based on open incident tickets. Tracks network uptime, server status, EHR availability, and critical system alerts.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">6</span>
+            <div>
+              <strong>/api/assets</strong>
+              <p>Provides asset inventory summary (computers, monitors, network equipment, medical devices). Returns asset counts by type, condition, and deployment status. Currently tracking 140+ assets across Northwoods Health System.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">7</span>
+            <div>
+              <strong>/api/sla-metrics</strong>
+              <p>Calculates SLA performance metrics based on ticket resolution times. Tracks response time goals, resolution time goals, and percentage of tickets meeting SLA targets by priority level.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Frontend Design</h3>
+
+        <p>The dashboard frontend is a single-page application with 8 distinct monitoring sections, all updating automatically every 60 seconds:</p>
+
+        <ul>
+          <li><strong>Today's Priority Tickets:</strong> Real-time view of urgent issues requiring immediate attention</li>
+          <li><strong>Onboarding/Offboarding Tracking:</strong> Employee lifecycle management with workflow status and completion tracking</li>
+          <li><strong>Activity Feed:</strong> Chronological timeline of all recent IT service activity</li>
+          <li><strong>Security &amp; Incident Alerts:</strong> HIPAA-sensitive security events and compliance incidents</li>
+          <li><strong>System Health Monitoring:</strong> Infrastructure status indicators (network, servers, EHR, critical systems)</li>
+          <li><strong>Asset Inventory:</strong> Equipment and device tracking with deployment status</li>
+          <li><strong>SLA Performance Metrics:</strong> Service level compliance tracking with visual performance indicators</li>
+          <li><strong>Team Workload Distribution:</strong> Ticket assignment distribution across IT staff members</li>
+        </ul>
+
+        <div class="callout callout-info">
+          <strong>🎨 NOC-Ready Design:</strong> The dashboard features a dark theme optimized for 24/7 Network Operations Center monitoring. High contrast, color-coded alerts, and large typography ensure readability in low-light environments and at-a-glance status assessment.
+        </div>
+
+        <h2>Key Features &amp; Capabilities</h2>
+
+        <h3>1. Real GLPI Data Integration</h3>
+        <p>Unlike static demos, this dashboard pulls live data from a real GLPI instance containing:</p>
+        <ul>
+          <li>44 realistic healthcare IT tickets (spanning incident response, service requests, changes, and projects)</li>
+          <li>140+ asset records (computers, monitors, network equipment, medical devices)</li>
+          <li>Full employee onboarding workflow for Dr. Emily Sanchez (includes Google Workspace setup, equipment checkout, access provisioning)</li>
+          <li>Security incident tickets (HIPAA breach scenarios, phishing attempts, unauthorized access)</li>
+        </ul>
+
+        <h3>2. Auto-Refresh &amp; Real-Time Updates</h3>
+        <p>The dashboard refreshes every 60 seconds, pulling the latest data from GLPI without requiring manual page reloads. This provides true operational visibility—when a ticket status changes or a new incident is reported, it appears on the dashboard within one minute.</p>
+
+        <h3>3. Responsive, Mobile-Ready Design</h3>
+        <p>Built with Bootstrap 5, the dashboard adapts to any screen size. IT managers can monitor operations from desktops in the NOC, tablets during rounds, or smartphones when on-call. All 8 dashboard sections remain accessible and readable on mobile devices.</p>
+
+        <h3>4. Docker Containerized Deployment</h3>
+        <p>The entire application is containerized with Docker, making it portable, reproducible, and easy to deploy. The production deployment uses:</p>
+        <ul>
+          <li>Gunicorn WSGI server (production-grade Python application server)</li>
+          <li>Nginx reverse proxy (handles SSL termination, static asset serving, and load balancing)</li>
+          <li>Environment-based configuration (credentials stored in <code>.env</code>, not hardcoded)</li>
+          <li>Docker Compose orchestration (single-command deployment: <code>docker-compose up -d</code>)</li>
+        </ul>
+
+        <h3>5. Healthcare IT Operational Context</h3>
+        <p>Every element of this dashboard reflects real Healthcare IT operational scenarios:</p>
+        <ul>
+          <li>HIPAA breach response tracking (security incidents flagged with compliance severity)</li>
+          <li>EHR uptime monitoring (critical system health for patient care operations)</li>
+          <li>Employee termination workflows (ensuring timely access revocation for compliance)</li>
+          <li>Medical device asset tracking (equipment lifecycle management for clinical operations)</li>
+          <li>After-hours incident SLA tracking (response time goals for critical healthcare systems)</li>
+        </ul>
+
+        <h2>What This Demonstrates</h2>
+
+        <p>This project proves several capabilities critical for Healthcare IT operations roles:</p>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div>
+              <strong>Operational Understanding</strong>
+              <p>I didn't just build a generic dashboard—I built a Healthcare IT operations tool. The 8 dashboard sections directly map to real NOC responsibilities: incident management, security response, SLA compliance, asset tracking, and workforce lifecycle management.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">2</span>
+            <div>
+              <strong>ITSM Platform Experience</strong>
+              <p>The dashboard integrates with GLPI, a real ITSM platform used by healthcare organizations worldwide. I built a custom API client that handles authentication, session management, and data retrieval—demonstrating practical experience with enterprise IT service management tools.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">3</span>
+            <div>
+              <strong>Full-Stack Development</strong>
+              <p>From backend API design to frontend data visualization, this is a complete application. Flask backend, RESTful API design, Chart.js visualizations, responsive Bootstrap UI, Docker containerization, and production deployment with Nginx—every layer demonstrates practical development capability.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">4</span>
+            <div>
+              <strong>Production-Ready Deployment</strong>
+              <p>This isn't running on a development server—it's deployed with Gunicorn (production WSGI server), Nginx reverse proxy, Docker containerization, and proper configuration management. It's the same architecture you'd use for a production Healthcare IT monitoring tool.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <span class="step-num">5</span>
+            <div>
+              <strong>Healthcare IT Domain Knowledge</strong>
+              <p>The dashboard reflects understanding of healthcare-specific IT operations: HIPAA compliance monitoring, clinical system uptime tracking, employee lifecycle management for access control, and medical device asset management. These aren't generic IT operations—they're Healthcare IT operations.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Technical Highlights</h2>
+
+        <h3>GLPIClient Architecture</h3>
+        <p>The custom <code>GLPIClient</code> class encapsulates all GLPI API interactions with intelligent session management:</p>
+        <ul>
+          <li><strong>Automatic session initialization:</strong> Authenticates with GLPI API using user token and app token</li>
+          <li><strong>Session reuse:</strong> Maintains active session across requests to minimize authentication overhead</li>
+          <li><strong>Graceful error handling:</strong> Catches API errors, timeouts, and connection failures without crashing the dashboard</li>
+          <li><strong>Flexible querying:</strong> Supports complex GLPI search criteria (filtering by date, status, category, urgency, etc.)</li>
+          <li><strong>Data transformation:</strong> Converts GLPI's raw API responses into clean, dashboard-ready JSON</li>
+        </ul>
+
+        <h3>Chart.js Data Visualization</h3>
+        <p>All metrics are visualized with Chart.js for immediate operational insight:</p>
+        <ul>
+          <li><strong>Ticket status distribution:</strong> Doughnut charts showing open/assigned/resolved breakdown</li>
+          <li><strong>SLA performance trends:</strong> Bar charts tracking resolution time compliance by priority level</li>
+          <li><strong>Workload distribution:</strong> Horizontal bar charts showing ticket assignments across IT staff</li>
+          <li><strong>System health indicators:</strong> Color-coded status badges (green/yellow/red) for critical infrastructure</li>
+        </ul>
+
+        <h3>Auto-Refresh Implementation</h3>
+        <p>The dashboard uses JavaScript's <code>setInterval()</code> to poll all 7 API endpoints every 60 seconds. When new data arrives, Chart.js animations smoothly update visualizations without jarring full-page reloads. Users can monitor operations continuously without interaction.</p>
+
+        <h2>Real-World Use Cases</h2>
+
+        <p>This dashboard design mirrors real Healthcare IT NOC operations:</p>
+
+        <div class="callout callout-success">
+          <strong>Scenario 1: After-Hours Incident Response</strong><br>
+          It's 2:00 AM. The on-call IT manager receives a PagerDuty alert. They open the dashboard on their phone and immediately see: 3 new high-priority tickets (EHR login failures, network outage at Clinic B, and a security alert). The SLA metrics show they have 47 minutes remaining to meet the 1-hour response SLA. The system health panel shows which infrastructure components are affected. They triage and escalate—all from mobile—within 5 minutes.
+        </div>
+
+        <div class="callout callout-warning">
+          <strong>Scenario 2: Morning Stand-Up Briefing</strong><br>
+          The IT Director walks into the 8:00 AM stand-up meeting and projects the dashboard on the conference room screen. The team immediately sees: 7 priority tickets from overnight (4 resolved, 3 still open), Dr. Emily Sanchez's onboarding is 78% complete (waiting on EHR access provisioning), and yesterday's SLA compliance was 94% (target: 95%). The Activity Feed shows a spike in password reset requests overnight. The team knows exactly what needs attention.
+        </div>
+
+        <div class="callout callout-info">
+          <strong>Scenario 3: Executive Reporting</strong><br>
+          The CFO asks, "How is IT performing on service delivery?" The IT Director sends a screenshot of the dashboard's SLA Performance Metrics section showing 96% compliance over the past 30 days, average ticket resolution time trending down, and asset inventory status at 98% deployment rate. One dashboard view provides executive-level operational insight without manual report generation.
+        </div>
+
+        <h2>Future Enhancements (Roadmap)</h2>
+
+        <p>This dashboard is a working foundation. Potential enhancements for production deployment include:</p>
+
+        <ul>
+          <li><strong>User authentication &amp; role-based access control:</strong> LDAP/Active Directory integration for secure multi-user access</li>
+          <li><strong>Customizable alerting:</strong> Email/SMS/Slack notifications when SLA thresholds are breached or critical incidents occur</li>
+          <li><strong>Historical trend analysis:</strong> Time-series data storage and visualization for month-over-month operational trends</li>
+          <li><strong>Multi-site support:</strong> Dashboard views filtered by location (Clinic A, Clinic B, Hospital Campus, etc.)</li>
+          <li><strong>Change management tracking:</strong> Integration with GLPI change tickets for infrastructure change calendar visibility</li>
+          <li><strong>Automated reporting:</strong> Scheduled PDF/Excel report generation for weekly/monthly operational reviews</li>
+        </ul>
+
+        <h2>Why This Matters for Your Organization</h2>
+
+        <p>Healthcare IT operations teams need visibility, speed, and reliability. This dashboard demonstrates my ability to:</p>
+
+        <ul>
+          <li>Understand Healthcare IT operational requirements (not just generic IT)</li>
+          <li>Build practical tools that solve real operational problems</li>
+          <li>Integrate with enterprise ITSM platforms (GLPI, ServiceNow, Jira Service Management, etc.)</li>
+          <li>Deploy production-ready applications with proper architecture (Docker, Nginx, Gunicorn)</li>
+          <li>Translate technical complexity into clear operational visibility</li>
+        </ul>
+
+        <p>If your organization is looking for someone who can both manage IT operations <strong>and</strong> build the tools to make those operations more efficient—this dashboard proves I can do both.</p>
+
+        <div class="article-footer">
+          <p><strong>Want to see it in action?</strong> The live dashboard is available for demonstration during interviews. I can also provide a walkthrough of the GLPI instance data, backend API architecture, and deployment configuration.</p>
+          <p><strong>Questions about the technical implementation?</strong> I'm happy to discuss the Flask backend architecture, GLPI API integration patterns, Chart.js visualization logic, or Docker deployment strategy in detail.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Harlen Morris. Portfolio Project — IT Operations Dashboard.</p>
+    </div>
+  </footer>
+</body>
+</html>

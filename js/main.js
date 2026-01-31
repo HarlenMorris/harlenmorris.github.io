@@ -1,6 +1,7 @@
 // ── Demo URLs ──
 const GLPI_URL = 'http://136.116.109.190';
 const BOOKSTACK_URL = 'http://136.116.109.190:8080';
+const DASHBOARD_URL = 'http://136.116.109.190:8085';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -18,6 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     bookstackLink.href = BOOKSTACK_URL;
     bookstackLink.target = '_blank';
     bookstackLink.rel = 'noopener noreferrer';
+  }
+
+  // ── Wire up Dashboard demo button ──
+  const dashboardLink = document.getElementById('dashboard-link');
+  if (dashboardLink) {
+    dashboardLink.href = DASHBOARD_URL;
+    dashboardLink.target = '_blank';
+    dashboardLink.rel = 'noopener noreferrer';
   }
 
   // ══════════════════════════════════════════
