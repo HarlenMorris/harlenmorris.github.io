@@ -517,7 +517,7 @@ foreach ($group in $groups) {
             <div class="script-body">
                 <p>
                     <strong>🔴 LIVE DEMO:</strong> This script connects to my actual GLPI instance at 
-                    <a href="http://136.116.109.190" target="_blank">http://136.116.109.190</a> and generates 
+                    <a href="https://glpi.harlenmorris.me" target="_blank">https://glpi.harlenmorris.me</a> and generates 
                     real asset audit reports with warranty tracking and license compliance analysis.
                 </p>
 
@@ -568,7 +568,7 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
     return results</code></pre>
                 </div>
 
-                <h4>Live Output (from http://136.116.109.190)</h4>
+                <h4>Live Output (from https://glpi.harlenmorris.me)</h4>
                 <div class="sample-output">
 <span class="info">2026-01-31 10:13:04 [INFO] Asset Audit Report Generator v1.0.0</span>
 <span class="success">2026-01-31 10:13:04 [INFO] ✓ GLPI session initialized successfully</span>
@@ -817,9 +817,9 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
                 <h4>Sample Output</h4>
                 <div class="sample-output">
 <span class="info">[INFO] Starting health checks on 8 endpoints</span>
-<span class="info">[INFO] Checking HTTP: http://136.116.109.190</span>
+<span class="info">[INFO] Checking HTTP: https://glpi.harlenmorris.me</span>
 <span class="success">[INFO] ✓ GLPI ITSM: HEALTHY (335.99ms)</span>
-<span class="info">[INFO] Checking HTTP: http://136.116.109.190:8080</span>
+<span class="info">[INFO] Checking HTTP: https://kb.harlenmorris.me</span>
 <span class="success">[INFO] ✓ BookStack KB: HEALTHY (408.88ms)</span>
 <span class="info">[INFO] Checking TCP: dc1.northwoodshealth.local:389</span>
 <span class="error">[ERROR] ✗ Active Directory: CRITICAL - DNS resolution failed</span>

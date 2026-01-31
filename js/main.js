@@ -1,7 +1,7 @@
 // ── Demo URLs ──
-const GLPI_URL = 'http://136.116.109.190';
-const BOOKSTACK_URL = 'http://136.116.109.190:8080';
-const DASHBOARD_URL = 'http://136.116.109.190:8085';
+const GLPI_URL = 'https://glpi.harlenmorris.me';
+const BOOKSTACK_URL = 'https://kb.harlenmorris.me';
+const DASHBOARD_URL = 'https://dashboard.harlenmorris.me';
 
 document.addEventListener('DOMContentLoaded', () => {
 
