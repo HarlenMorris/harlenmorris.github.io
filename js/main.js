@@ -184,7 +184,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      document.querySelector('.nav-links')?.classList.remove('open');
+      // Close mobile menu when any nav link is clicked
+      const navLinks = document.querySelector('.nav-links');
+      if (navLinks) {
+        navLinks.classList.remove('open');
+      }
     }
   });
 });
