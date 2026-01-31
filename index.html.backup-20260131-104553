@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harlen Morris — IT Professional</title>
+  <meta name="description" content="IT professional specializing in Healthcare IT, ITAM, Help Desk, and HIPAA compliance. Live demos: GLPI ITSM, BookStack Knowledge Base, and IT Operations Dashboard with real-time monitoring, SLA metrics, and security alerts.">
+  <meta property="og:title" content="Harlen Morris — IT Professional">
+  <meta property="og:description" content="Healthcare IT · Asset Management · Help Desk · HIPAA Compliance">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">HM</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#demos">Demos</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-tag">IT Professional · Wausau, WI</p>
+        <h1>Harlen Morris</h1>
+        <p class="hero-sub">Healthcare IT &bull; Asset Management &bull; Help Desk &bull; HIPAA Compliance</p>
+        <p class="hero-desc">
+          IT specialist with hands-on experience managing technology infrastructure for healthcare organizations.
+          Sole IT resource for 10 facilities, 100+ employees, and 80+ providers — building systems that keep
+          patient care running smoothly.
+        </p>
+        <div class="hero-actions">
+          <a href="#demos" class="btn btn-primary">View Live Demos</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm an IT professional transitioning into a focused career in Healthcare IT, asset management,
+            and help desk operations. At my previous role as the <strong>sole IT resource</strong> for a
+            behavioral health organization with 10 facilities, I built and managed the entire technology
+            infrastructure from the ground up.
+          </p>
+          <p>
+            From deploying and tracking IT assets with <strong>Snipe-IT</strong>, managing help desk tickets
+            through <strong>Jira Service Management</strong>, to ensuring <strong>HIPAA compliance</strong>
+            across all systems — I've done it all in a real healthcare environment. I also bring a background
+            in technical writing and content creation, having published articles and videos
+            for an online publication reaching <strong>250,000+ monthly users</strong>.
+          </p>
+          <p>
+            Below you'll find <strong>live, working demos</strong> of the IT systems I build and manage,
+            along with sample documentation and knowledge base articles that reflect real-world workflows.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-num">10</span>
+            <span class="highlight-label">Facilities Managed</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-num">100+</span>
+            <span class="highlight-label">Employees Supported</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-num">80+</span>
+            <span class="highlight-label">Healthcare Providers</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-num">250K+</span>
+            <span class="highlight-label">Monthly Readers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Demos -->
+  <section class="section section-alt" id="demos">
+    <div class="container">
+      <h2 class="section-title">Live Demos</h2>
+      <p class="section-desc">
+        Three fully deployed IT systems I built from scratch for a simulated healthcare organization.
+        Explore them live or browse the showcases below.
+      </p>
+
+      <!-- Single GLPI Demo Card -->
+      <div class="demo-hero">
+        <div class="demo-hero-content">
+          <div class="demo-hero-text">
+            <div class="demo-icon-inline">🏥</div>
+            <h3>GLPI ITSM — Northwoods Health System</h3>
+            <p class="demo-subtitle">Help Desk · Asset Management · Knowledge Base · Change Management · Compliance Workflows</p>
+            <div class="case-study">
+              <p><strong>The Challenge:</strong> Northwoods Health System — a multi-site behavioral health organization with 3 locations and 100+ employees — had no centralized IT tracking. Asset requests went through email chains, tickets were tracked in spreadsheets, and there was no visibility into SLA compliance or security incidents. HIPAA audits required manual evidence gathering that took days.</p>
+              
+              <p><strong>The Approach:</strong> I evaluated several ITSM platforms (Jira, ServiceNow, Freshdesk) and selected GLPI for its comprehensive feature set covering ticketing, asset management, knowledge base, and change management in a single open-source platform — critical for a healthcare org with limited IT budget.</p>
+              
+              <p><strong>The Solution:</strong> Deployed a fully configured GLPI environment with 42 tickets demonstrating complete lifecycle management, 5 ITIL change management requests (Major, Normal, Emergency, Standard/Pre-approved), 140+ tracked IT assets across 7 categories, 10 self-service KB articles, software license compliance tracking, and a formal employee onboarding workflow with multi-level approvals and HIPAA compliance tasks.</p>
+              
+              <p><strong>The Results:</strong></p>
+              <ul class="results-list">
+                <li>Centralized tracking for all IT operations across 3 locations</li>
+                <li><strong>93.9% SLA compliance</strong> with measurable response/resolution metrics</li>
+                <li>Self-service KB reducing routine ticket volume</li>
+                <li>Audit-ready documentation for HIPAA compliance reviews</li>
+                <li>Complete asset lifecycle visibility from procurement to retirement</li>
+              </ul>
+            </div>
+            <div class="demo-launch">
+              <a href="#" class="btn btn-primary btn-lg" id="glpi-link">Launch Live Demo →</a>
+              <p class="demo-creds">Login: <code>guest</code> / <code>guest</code> — read-only access</p>
+            </div>
+          </div>
+          <div class="demo-hero-img">
+            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard — ticket metrics, asset counts, and SLA tracking" class="demo-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Showcase Grid -->
+      <h3 class="showcase-title">What's Inside</h3>
+      <div class="showcase-grid">
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-tickets-admin.png" alt="GLPI Ticket Queue — healthcare IT tickets with priority and status" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Help Desk &amp; Ticketing</h4>
+            <p>42 tickets across Hardware, Software, Network, Access, and Security categories. Full lifecycle from New → Assigned → Solved → Closed, with SLA tracking and priority escalation.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-computers.png" alt="GLPI Asset Inventory — 50 computers with specs, assignments, and lifecycle status" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>IT Asset Management</h4>
+            <p>50+ computers, 12 monitors, printers, network gear, and mobile devices — all tracked with specs, assignments, warranty dates, and lifecycle status across 3 locations.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-licenses.png" alt="GLPI Software License Management" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Software &amp; License Tracking</h4>
+            <p>10 software titles with license counts, assignments, and compliance tracking. Covers Office 365, EHR systems, antivirus, and healthcare-specific applications.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-kb-admin.png" alt="GLPI Knowledge Base articles" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Knowledge Base</h4>
+            <p>10 self-service articles covering password resets, VPN setup, phishing reporting, HIPAA guidelines, and common IT procedures — reducing ticket volume through documentation.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Reporting &amp; Metrics</h4>
+            <p>Built-in dashboards showing ticket volume, resolution times, asset distribution, and department workload — the data that drives IT operations decisions.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-assets.png" alt="GLPI network and peripheral equipment" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Employee Onboarding Workflow</h4>
+            <p>26-task, 4-phase onboarding ticket for a new clinical hire — covering account creation, equipment provisioning, compliance training, HIPAA certification, and 30-day follow-up.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/glpi-change-chg001-full.jpg" alt="GLPI ITIL Change Management — formal RFC with CAB approval, risk assessment, and PIR" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>ITIL Change Management</h4>
+            <p>5 formal change requests demonstrating the full ITIL change lifecycle: Major change with CAB approval and PIR, emergency firewall rule, standard firmware upgrade, phased EDR deployment, and low-risk feature rollout.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BookStack IT Knowledge Base Demo -->
+      <div class="demo-hero" style="margin-top: 3rem;">
+        <div class="demo-hero-content">
+          <div class="demo-hero-text">
+            <div class="demo-icon-inline">📚</div>
+            <h3>BookStack — IT Knowledge Base</h3>
+            <p class="demo-subtitle">Documentation · Policies · Procedures · Clinical Systems · DR Planning</p>
+            <div class="case-study">
+              <p><strong>The Challenge:</strong> IT support knowledge lived in the heads of individual technicians. When the sole IT person was unavailable, staff had no way to self-serve common issues. New hires took weeks to get up to speed on procedures, and HIPAA compliance documentation was scattered across shared drives with no version control.</p>
+              
+              <p><strong>The Approach:</strong> Selected BookStack for its intuitive Shelves → Books → Chapters → Pages hierarchy, WYSIWYG editing (enabling non-technical staff to contribute), and granular permissions. Organized content by operational domain rather than by department, making documentation discoverable regardless of who's looking.</p>
+              
+              <p><strong>The Solution:</strong> Built a comprehensive IT knowledge portal with 57 professional-grade articles across 5 knowledge areas: Security &amp; Compliance (14), Help Desk Operations (12), Employee Onboarding (12), Infrastructure &amp; Network (11), and Clinical Systems &amp; EHR (8). Each article includes structured headings, callout boxes, decision tables, and step-by-step procedures.</p>
+              
+              <p><strong>The Results:</strong></p>
+              <ul class="results-list">
+                <li><strong>57 articles</strong> covering 100% of common IT support scenarios</li>
+                <li>Self-service documentation reducing ticket volume for password resets, VPN, and printing issues</li>
+                <li>HIPAA compliance documentation centralized with version history</li>
+                <li>Onboarding time reduced — new IT staff have complete runbooks from day one</li>
+                <li>Public-facing demo requiring zero login — proof of documentation quality</li>
+              </ul>
+            </div>
+            <div class="demo-launch">
+              <a href="#" class="btn btn-primary btn-lg" id="bookstack-link">Launch Live Demo →</a>
+              <p class="demo-creds">Public access — no login required</p>
+            </div>
+          </div>
+          <div class="demo-hero-img">
+            <img src="img/screenshots/bookstack-shelves.png" alt="BookStack Knowledge Base — 5 shelves covering Security, Help Desk, Onboarding, Infrastructure, and Clinical Systems" class="demo-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- BookStack Showcase Grid -->
+      <h3 class="showcase-title">What's Inside</h3>
+      <div class="showcase-grid">
+
+        <div class="showcase-item">
+          <img src="img/screenshots/bookstack-security-shelf.png" alt="BookStack Security & Compliance shelf with HIPAA, incident response, and phishing guides" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Security &amp; Compliance</h4>
+            <p>14 articles covering HIPAA compliance, PHI handling, breach notification, security policies, incident response playbooks, and phishing awareness — the regulatory backbone of healthcare IT.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/bookstack-helpdesk-book.png" alt="BookStack Help Desk Procedures Manual" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Help Desk Operations</h4>
+            <p>12 articles with ticket triage procedures, escalation matrices, SLA guidelines, troubleshooting guides for passwords, networking, printers, VPN, email, and remote support protocols.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/bookstack-hipaa-article.png" alt="BookStack HIPAA Overview article with detailed compliance documentation" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Rich Documentation</h4>
+            <p>Professional-grade articles with structured headings, callout boxes, decision tables, step-by-step procedures, and cross-references — the kind of documentation that reduces ticket volume.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/bookstack-incident-response.png" alt="BookStack Incident Classification article with severity levels and response procedures" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Incident Response &amp; DR</h4>
+            <p>Incident classification framework, response procedures by severity, business continuity plans, backup schedules with RPO/RTO targets, and annual disaster recovery testing protocols.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/bookstack-hipaa-book.png" alt="BookStack HIPAA Compliance Guide book with chapter listing" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Onboarding &amp; Offboarding</h4>
+            <p>12 articles covering pre-arrival IT checklists, day-one device setup, account provisioning, software installation, security orientation, offboarding procedures, and BYOD policies.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/bookstack-homepage.png" alt="BookStack homepage showing recent activity and books" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Clinical Systems &amp; EHR</h4>
+            <p>8 articles on IntakeQ EHR support, provider permissions, telehealth troubleshooting, e-prescribing setup, HL7 lab interfaces, and clinical device support — bridging IT and clinical operations.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- IT Operations Dashboard Demo -->
+      <div class="demo-hero" style="margin-top: 3rem;">
+        <div class="demo-hero-content">
+          <div class="demo-hero-text">
+            <div class="demo-icon-inline">📊</div>
+            <h3>IT Operations Dashboard — Real-Time NOC Monitoring</h3>
+            <p class="demo-subtitle">Ticket Triage · Security Alerts · Asset Tracking · SLA Metrics · Onboarding Workflows</p>
+            <div class="case-study">
+              <p><strong>The Challenge:</strong> IT leadership had no real-time visibility into operational health. Ticket backlogs, SLA breaches, and security incidents were discovered reactively. The GLPI interface provided data but required navigating multiple screens — there was no single-pane-of-glass view for IT operations meetings or NOC monitoring.</p>
+              
+              <p><strong>The Approach:</strong> Built a custom Python/Flask dashboard that connects to the GLPI REST API, pulling live data and presenting it in a dark-theme NOC format designed for wall-mounted displays. Focused on the 8 metrics that matter most for healthcare IT: active tickets, security posture, system health, SLA compliance, asset inventory, team workload, onboarding status, and activity feed.</p>
+              
+              <p><strong>The Solution:</strong> Real-time operations dashboard with auto-refresh, pulling live data from GLPI via REST API. Features priority ticket queue, security incident alerts with threat gauge, system health monitoring for 8 infrastructure services, <strong>93.9% SLA compliance</strong> tracking, asset inventory visualization, and team workload distribution — all in a single scrollable view.</p>
+              
+              <p><strong>The Results:</strong></p>
+              <ul class="results-list">
+                <li>Single-pane-of-glass for all IT operations metrics</li>
+                <li>Security posture visible at a glance (<strong>13 incident categories</strong> tracked)</li>
+                <li>SLA compliance monitoring with trend analysis</li>
+                <li>Proactive identification of ticket backlogs and workload imbalances</li>
+                <li><strong>Auto-refresh every 60 seconds</strong> — zero manual intervention needed</li>
+              </ul>
+            </div>
+            <div class="demo-launch">
+              <a href="#" class="btn btn-primary btn-lg" id="dashboard-link">Launch Live Demo →</a>
+              <p class="demo-creds">Auto-refreshes every 60 seconds — no login required</p>
+            </div>
+          </div>
+          <div class="demo-hero-img">
+            <img src="img/screenshots/dashboard-hero.jpg" alt="IT Operations Dashboard — dark NOC theme with ticket queues, security alerts, asset inventory, and SLA metrics" class="demo-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Showcase Grid -->
+      <h3 class="showcase-title">What's Inside</h3>
+      <div class="showcase-grid">
+
+        <div class="showcase-item">
+          <img src="img/screenshots/dashboard-tickets.png" alt="Priority Tickets panel showing 9 active tickets color-coded by urgency" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Priority Ticket Queue</h4>
+            <p>Real-time view of open tickets sorted by priority and modification date. Color-coded badges (Critical → Low) with aging indicators — what a help desk lead sees at the start of every shift.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/dashboard-onboarding.png" alt="Onboarding section showing Dr. Emily Sanchez active onboarding with progress bar" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Onboarding &amp; Offboarding</h4>
+            <p>Tracks active employee lifecycle workflows with progress bars. Currently shows Dr. Emily Sanchez's 26-task clinical onboarding and a completed offboarding — connecting HR processes to IT operations.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/dashboard-security.png" alt="Security alerts with severity badges and threat level gauge" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Security &amp; Incident Alerts</h4>
+            <p>13 security-related incidents including phishing campaigns, stolen equipment, VPN issues, and compliance audits. Includes a real-time threat level gauge — critical for HIPAA-regulated environments.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/dashboard-health.png" alt="System health grid showing 8 services with status indicators" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>System Health Monitoring</h4>
+            <p>Live health checks for 8 infrastructure services: GLPI, BookStack, Active Directory, Exchange, VPN, IntakeQ EHR, backup, and print servers — with response times and pulsing status indicators.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/dashboard-sla.png" alt="SLA Performance metrics showing 93.9% compliance with trend chart" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>SLA Performance Metrics</h4>
+            <p>93.9% SLA compliance, 3.0h average response time, 9.4h average resolution time — with a 30-day trend chart. The metrics that demonstrate IT is meeting its commitments to the organization.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <img src="img/screenshots/dashboard-assets.png" alt="Asset inventory doughnut chart with 140 assets across 7 categories" class="showcase-img" loading="lazy">
+          <div class="showcase-info">
+            <h4>Asset Inventory &amp; Workload</h4>
+            <p>140 tracked assets across 7 categories with interactive doughnut chart, plus team workload distribution showing ticket volume per technician — data-driven resource allocation.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">Mar 2025 – Jan 2026</div>
+          <div class="timeline-content">
+            <h3>IT, Marketing &amp; Business Operations Specialist</h3>
+            <p class="timeline-company">Behavioral Health Clinic (BHC)</p>
+            <p>
+              Sole IT resource for a multi-site behavioral health organization. Built and managed
+              the entire technology infrastructure supporting patient care delivery.
+            </p>
+            <ul>
+              <li><strong>IT Asset Management:</strong> Deployed Snipe-IT to track 200+ assets across 10 facilities — laptops, monitors, network equipment, and software licenses</li>
+              <li><strong>Help Desk &amp; Ticketing:</strong> Managed IT support via Jira Service Management for 100+ employees and 80+ healthcare providers</li>
+              <li><strong>HIPAA Compliance:</strong> Implemented security policies, KnowBe4 phishing training, and incident response procedures</li>
+              <li><strong>EHR Administration:</strong> Managed IntakeQ electronic health records system for clinical staff</li>
+              <li><strong>Remote Support:</strong> Deployed ScreenConnect for remote troubleshooting across all locations</li>
+              <li><strong>Google Workspace Admin:</strong> User provisioning, security settings, group management for the entire org</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Sep 2019 – Nov 2025</div>
+          <div class="timeline-content">
+            <h3>Technical Writer &amp; Content Creator</h3>
+            <p class="timeline-company">HDME LLC</p>
+            <p>
+              Published technical articles and video content for an online publication
+              reaching 250,000+ monthly users.
+            </p>
+            <ul>
+              <li><strong>Technical Writing:</strong> Authored detailed guides, tutorials, and documentation for technical audiences</li>
+              <li><strong>Video Content:</strong> Created and published video content covering technical topics</li>
+              <li><strong>SEO &amp; Analytics:</strong> Applied data-driven content strategy achieving consistent organic growth</li>
+              <li><strong>Content Management:</strong> Managed publishing workflow, CMS updates, and content scheduling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Dec 2018</div>
+          <div class="timeline-content">
+            <h3>B.S. in Education — Natural Broadfield Science</h3>
+            <p class="timeline-company">University of Wisconsin Oshkosh</p>
+            <p>
+              Science education background providing strong analytical thinking, instructional design,
+              and communication skills — directly applicable to IT training and documentation.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>IT Service Management</h3>
+          <div class="skill-tags">
+            <span>Jira Service Management</span>
+            <span>GLPI</span>
+            <span>Ticket Triage</span>
+            <span>SLA Management</span>
+            <span>Incident Response</span>
+            <span>Knowledge Base Development</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>IT Asset Management</h3>
+          <div class="skill-tags">
+            <span>Snipe-IT</span>
+            <span>Asset Lifecycle</span>
+            <span>License Tracking</span>
+            <span>Inventory Audits</span>
+            <span>Depreciation</span>
+            <span>Procurement</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Healthcare IT &amp; Compliance</h3>
+          <div class="skill-tags">
+            <span>HIPAA</span>
+            <span>IntakeQ EHR</span>
+            <span>ePHI Protection</span>
+            <span>Security Awareness (KnowBe4)</span>
+            <span>Incident Response</span>
+            <span>Risk Assessment</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Infrastructure &amp; Tools</h3>
+          <div class="skill-tags">
+            <span>Google Workspace Admin</span>
+            <span>ScreenConnect</span>
+            <span>Active Directory</span>
+            <span>VPN</span>
+            <span>DNS / DHCP</span>
+            <span>Linux</span>
+            <span>Docker</span>
+            <span>Git</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Technical Writing</h3>
+          <div class="skill-tags">
+            <span>SOPs &amp; Runbooks</span>
+            <span>User Guides</span>
+            <span>KB Articles</span>
+            <span>Training Materials</span>
+            <span>SEO</span>
+            <span>Content Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Knowledge Base Articles -->
+  <section class="section" id="articles">
+    <div class="container">
+      <h2 class="section-title">Knowledge Base &amp; Documentation</h2>
+      <p class="section-desc">
+        Sample help desk articles and IT documentation demonstrating technical writing
+        skills and real-world support workflows.
+      </p>
+      <div class="articles-grid">
+        <a href="articles/password-reset.html" class="article-card">
+          <span class="article-tag">Account Access</span>
+          <h3>How to Reset Your Password</h3>
+          <p>Step-by-step guide for self-service password resets, including MFA recovery and escalation procedures.</p>
+        </a>
+        <a href="articles/vpn-troubleshooting.html" class="article-card">
+          <span class="article-tag">Network</span>
+          <h3>VPN Connection Troubleshooting</h3>
+          <p>Common VPN issues and solutions for remote healthcare workers, including split tunneling and EMR access.</p>
+        </a>
+        <a href="articles/phishing-reporting.html" class="article-card">
+          <span class="article-tag">Security</span>
+          <h3>How to Report a Phishing Email</h3>
+          <p>Identifying suspicious emails and the proper reporting workflow to protect patient data and comply with HIPAA.</p>
+        </a>
+        <a href="articles/new-hire-setup.html" class="article-card">
+          <span class="article-tag">Onboarding</span>
+          <h3>New Hire IT Setup Checklist</h3>
+          <p>Complete onboarding guide covering equipment provisioning, account setup, and compliance training.</p>
+        </a>
+        <a href="articles/asset-checkout.html" class="article-card">
+          <span class="article-tag">ITAM</span>
+          <h3>Asset Check-Out / Check-In Process</h3>
+          <p>How to request, receive, and return IT equipment using the Snipe-IT asset management system.</p>
+        </a>
+        <a href="articles/hipaa-it-basics.html" class="article-card">
+          <span class="article-tag">Compliance</span>
+          <h3>HIPAA Basics for IT Staff</h3>
+          <p>Essential HIPAA compliance guidelines for IT personnel handling ePHI in healthcare environments.</p>
+        </a>
+        <a href="articles/automation-showcase.html" class="article-card">
+          <span class="article-tag">Automation</span>
+          <h3>Automation & Scripting Showcase</h3>
+          <p>6 production-ready automation scripts (PowerShell, Bash, Python) demonstrating real IT automation workflows with live GLPI integration.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-desc">
+        I'm actively seeking opportunities in Healthcare IT, IT Asset Management, and Help Desk roles.
+        Let's connect.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:harlendm@gmail.com" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">harlendm@gmail.com</span>
+        </a>
+        <a href="tel:+19206423171" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">(920) 642-3171</span>
+        </a>
+        <a href="https://www.linkedin.com/in/harlendm/" class="contact-card" id="linkedin-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">Connect with me</span>
+        </a>
+        <a href="Harlen_Morris_Resume_GENERAL.pdf" class="contact-card" id="resume-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">📄</span>
+          <span class="contact-label">Resume</span>
+          <span class="contact-value">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Harlen Morris. Built with purpose.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

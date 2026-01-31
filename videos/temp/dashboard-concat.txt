@@ -1,0 +1,8 @@
+# Title card (3 seconds)
+file 'dashboard-title.png'
+duration 3
+# Recording (variable length)
+file 'dashboard-recording.webm'
+# End card (3 seconds)
+file 'dashboard-end.png'
+duration 3

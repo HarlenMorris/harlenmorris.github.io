@@ -1,0 +1,8 @@
+# Title card (3 seconds)
+file 'glpi-title.png'
+duration 3
+# Recording (variable length)
+file 'glpi-recording.webm'
+# End card (3 seconds)
+file 'glpi-end.png'
+duration 3
