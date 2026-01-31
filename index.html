@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://harlenmorris.github.io/">
   <title>Harlen Morris — IT Professional</title>
   <meta name="description" content="IT professional specializing in Healthcare IT, ITAM, Help Desk, and HIPAA compliance. Live demos: GLPI ITSM, BookStack Knowledge Base, and IT Operations Dashboard with real-time monitoring, SLA metrics, and security alerts.">
   <meta property="og:title" content="Harlen Morris — IT Professional">
@@ -17,11 +19,68 @@
   <meta name="twitter:description" content="Healthcare IT · Asset Management · Help Desk · HIPAA Compliance. Live demos of GLPI ITSM, BookStack KB, and IT Operations Dashboard.">
   <meta name="twitter:image" content="https://harlenmorris.github.io/img/og-preview.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Resource Hints for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harlen Morris",
+    "jobTitle": "IT Professional",
+    "description": "IT professional specializing in Healthcare IT, ITAM, Help Desk, and HIPAA compliance",
+    "url": "https://harlenmorris.github.io",
+    "email": "harlendm@gmail.com",
+    "telephone": "+1-920-642-3171",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wausau",
+      "addressRegion": "WI",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/harlendm/"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of Wisconsin Oshkosh"
+    },
+    "knowsAbout": [
+      "Healthcare IT",
+      "IT Asset Management",
+      "HIPAA Compliance",
+      "Help Desk",
+      "ITIL",
+      "Technical Writing"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Harlen Morris Portfolio",
+    "url": "https://harlenmorris.github.io",
+    "description": "IT professional portfolio showcasing Healthcare IT, ITAM, Help Desk, and HIPAA compliance experience with live demos",
+    "author": {
+      "@type": "Person",
+      "name": "Harlen Morris"
+    },
+    "inLanguage": "en-US"
+  }
+  </script>
 </head>
 <body>
 
@@ -160,7 +219,7 @@
             </div>
           </div>
           <div class="demo-hero-img">
-            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard showing ticket metrics, asset inventory counts, and SLA compliance tracking" class="demo-img">
+            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard showing ticket metrics, asset inventory counts, and SLA compliance tracking" class="demo-img" width="1200" height="800" fetchpriority="high">
           </div>
         </div>
       </div>
@@ -603,6 +662,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
