@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Harlen Morris</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Harlen Morris's IT portfolio.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f0fdf4 100%);
+      padding: 80px 24px;
+    }
+    .error-content {
+      text-align: center;
+      max-width: 600px;
+    }
+    .error-code {
+      font-size: 6rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .error-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 16px;
+    }
+    .error-desc {
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .error-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .error-code { font-size: 4rem; }
+      .error-title { font-size: 1.5rem; }
+      .error-links { flex-direction: column; max-width: 300px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Harlen Morris Home">HM</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#demos">Demos</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#contact" class="btn-nav">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 404 Error Content -->
+  <div class="error-hero">
+    <div class="error-content">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-desc">
+        The page you're looking for doesn't exist or has been moved.
+        Head back to the homepage or explore my IT demos and experience.
+      </p>
+      <div class="error-links">
+        <a href="/" class="btn btn-primary">Go to Homepage</a>
+        <a href="/#demos" class="btn btn-outline">View Live Demos</a>
+        <a href="/#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Harlen Morris. Built with purpose.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

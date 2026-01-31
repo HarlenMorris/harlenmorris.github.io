@@ -218,7 +218,87 @@ function toggleVideo(id) {
   }
 }
 
-// ── Fade-in on scroll ──
+// ══════════════════════════════════════════
+//  ANIMATED COUNTERS
+// ══════════════════════════════════════════
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1500; // ms
+      const start = performance.now();
+      
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        el.textContent = current.toLocaleString() + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.highlight-num').forEach(el => {
+  // Parse the number and suffix from current text
+  const text = el.textContent.trim();
+  const match = text.match(/^([\d,]+)(.*)/);
+  if (match) {
+    el.dataset.target = match[1].replace(/,/g, '');
+    el.dataset.suffix = match[2];
+    el.textContent = '0' + match[2];
+    counterObserver.observe(el);
+  }
+});
+
+// ══════════════════════════════════════════
+//  SCROLL REVEAL ANIMATIONS
+// ══════════════════════════════════════════
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+// Add .reveal to section titles, demo cards, timeline items, skill groups
+document.querySelectorAll('.section-title, .demo-hero, .showcase-item, .timeline-item, .skill-group, .contact-card, .article-card').forEach(el => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
+
+// ══════════════════════════════════════════
+//  DARK MODE TOGGLE
+// ══════════════════════════════════════════
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  const icon = document.querySelector('.theme-icon');
+  if (icon) icon.textContent = next === 'dark' ? '☀️' : '🌙';
+}
+
+// Load saved preference
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    const icon = document.querySelector('.theme-icon');
+    if (icon) icon.textContent = '☀️';
+  }
+})();
+
+// ── Fade-in on scroll (legacy — now using reveal classes above) ──
 const fadeObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -231,7 +311,7 @@ const fadeObserver = new IntersectionObserver(
   { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
 );
 
-document.querySelectorAll('.demo-hero, .showcase-item, .article-card, .timeline-item, .skill-group, .contact-card, .highlight-card').forEach(el => {
+document.querySelectorAll('.highlight-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';

@@ -25,9 +25,40 @@
   --max-width: 1100px;
 }
 
+/* ── Dark Mode ────────────────────────────── */
+[data-theme="dark"] {
+  --color-bg: #0d1117;
+  --color-bg-alt: #161b22;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-primary: #58a6ff;
+  --color-primary-dark: #79c0ff;
+  --color-primary-light: #1a2332;
+  --color-accent: #3fb950;
+  --color-border: #30363d;
+  --color-card: #161b22;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .nav {
+  background: rgba(13, 17, 23, 0.95);
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+}
+
+[data-theme="dark"] .demo-creds code {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
 html { 
   scroll-behavior: smooth;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -133,6 +164,46 @@ a:hover { color: var(--color-primary-dark); }
   background: var(--color-text);
   margin: 5px 0;
   transition: .3s;
+}
+
+/* ── Theme Toggle Button ──────────────────── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.3s;
+  margin-left: 16px;
+}
+.theme-toggle:hover {
+  background: var(--color-bg-alt);
+  border-color: var(--color-primary);
+}
+
+/* ── Scroll Reveal Animations ─────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ── Hero ─────────────────────────────────── */
@@ -751,6 +822,11 @@ a:hover { color: var(--color-primary-dark); }
 @media (max-width: 768px) {
   /* Navigation */
   .nav-toggle { display: block; }
+  .nav-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 8px;
+  }
   .nav-links {
     display: none;
     position: absolute;
@@ -762,9 +838,15 @@ a:hover { color: var(--color-primary-dark); }
     gap: 16px;
     border-bottom: 1px solid var(--color-border);
     box-shadow: var(--shadow-md);
+    grid-column: 1 / -1;
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 0; } /* Larger tap target */
+  .theme-toggle { margin-left: 0; }
+  
+  [data-theme="dark"] .nav-links {
+    background: rgba(13, 17, 23, 0.98);
+  }
 
   /* Hero */
   .hero { padding: 110px 0 60px; }

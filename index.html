@@ -8,17 +8,30 @@
   <meta property="og:title" content="Harlen Morris — IT Professional">
   <meta property="og:description" content="Healthcare IT · Asset Management · Help Desk · HIPAA Compliance">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harlenmorris.github.io">
+  <meta property="og:image" content="https://harlenmorris.github.io/img/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harlen Morris — IT Professional">
+  <meta name="twitter:description" content="Healthcare IT · Asset Management · Help Desk · HIPAA Compliance. Live demos of GLPI ITSM, BookStack KB, and IT Operations Dashboard.">
+  <meta name="twitter:image" content="https://harlenmorris.github.io/img/og-preview.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Skip to main content link for accessibility -->
+  <a href="#about" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">HM</a>
+      <a href="#" class="nav-logo" aria-label="Harlen Morris Home">HM</a>
       <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
@@ -29,6 +42,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact" class="btn-nav">Contact</a></li>
       </ul>
+      <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <span class="theme-icon">🌙</span>
+      </button>
     </div>
   </nav>
 
@@ -53,7 +69,7 @@
   </header>
 
   <!-- About -->
-  <section class="section" id="about">
+  <section class="section" id="about" role="main">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="about-grid">
@@ -144,7 +160,7 @@
             </div>
           </div>
           <div class="demo-hero-img">
-            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard — ticket metrics, asset counts, and SLA tracking" class="demo-img" loading="lazy">
+            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard showing ticket metrics, asset inventory counts, and SLA compliance tracking" class="demo-img">
           </div>
         </div>
       </div>
@@ -154,7 +170,7 @@
       <div class="showcase-grid">
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-tickets-admin.png" alt="GLPI Ticket Queue — healthcare IT tickets with priority and status" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-tickets-admin.png" alt="GLPI ticket queue showing healthcare IT support tickets with priority levels, status, and assignment tracking" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Help Desk &amp; Ticketing</h4>
             <p>42 tickets across Hardware, Software, Network, Access, and Security categories. Full lifecycle from New → Assigned → Solved → Closed, with SLA tracking and priority escalation.</p>
@@ -162,7 +178,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-computers.png" alt="GLPI Asset Inventory — 50 computers with specs, assignments, and lifecycle status" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-computers.png" alt="GLPI asset inventory displaying 50 computers with detailed specifications, user assignments, warranty dates, and lifecycle status" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>IT Asset Management</h4>
             <p>50+ computers, 12 monitors, printers, network gear, and mobile devices — all tracked with specs, assignments, warranty dates, and lifecycle status across 3 locations.</p>
@@ -170,7 +186,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-licenses.png" alt="GLPI Software License Management" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-licenses.png" alt="GLPI software license management dashboard with Office 365, EHR, and healthcare software license tracking" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Software &amp; License Tracking</h4>
             <p>10 software titles with license counts, assignments, and compliance tracking. Covers Office 365, EHR systems, antivirus, and healthcare-specific applications.</p>
@@ -178,7 +194,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-kb-admin.png" alt="GLPI Knowledge Base articles" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-kb-admin.png" alt="GLPI knowledge base with self-service articles for password resets, VPN setup, and HIPAA compliance procedures" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Knowledge Base</h4>
             <p>10 self-service articles covering password resets, VPN setup, phishing reporting, HIPAA guidelines, and common IT procedures — reducing ticket volume through documentation.</p>
@@ -186,7 +202,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard displaying ticket volume trends, resolution times, asset distribution, and department workload metrics" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Reporting &amp; Metrics</h4>
             <p>Built-in dashboards showing ticket volume, resolution times, asset distribution, and department workload — the data that drives IT operations decisions.</p>
@@ -194,7 +210,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-assets.png" alt="GLPI network and peripheral equipment" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-assets.png" alt="GLPI network equipment and peripheral asset tracking including printers, monitors, and network devices" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Employee Onboarding Workflow</h4>
             <p>26-task, 4-phase onboarding ticket for a new clinical hire — covering account creation, equipment provisioning, compliance training, HIPAA certification, and 30-day follow-up.</p>
@@ -202,7 +218,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-change-chg001-full.jpg" alt="GLPI ITIL Change Management — formal RFC with CAB approval, risk assessment, and PIR" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/glpi-change-chg001-full.jpg" alt="GLPI ITIL change management showing formal RFC with Change Advisory Board approval, risk assessment matrix, and post-implementation review" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>ITIL Change Management</h4>
             <p>5 formal change requests demonstrating the full ITIL change lifecycle: Major change with CAB approval and PIR, emergency firewall rule, standard firmware upgrade, phased EDR deployment, and low-risk feature rollout.</p>
@@ -248,7 +264,7 @@
             </div>
           </div>
           <div class="demo-hero-img">
-            <img src="img/screenshots/bookstack-shelves.png" alt="BookStack Knowledge Base — 5 shelves covering Security, Help Desk, Onboarding, Infrastructure, and Clinical Systems" class="demo-img" loading="lazy">
+            <img src="img/screenshots/bookstack-shelves.png" alt="BookStack knowledge base homepage displaying 5 organized shelves covering Security & Compliance, Help Desk, Employee Onboarding, Infrastructure, and Clinical Systems" class="demo-img" loading="lazy">
           </div>
         </div>
       </div>
@@ -258,7 +274,7 @@
       <div class="showcase-grid">
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-security-shelf.png" alt="BookStack Security & Compliance shelf with HIPAA, incident response, and phishing guides" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/bookstack-security-shelf.png" alt="BookStack Security and Compliance shelf containing 14 articles on HIPAA compliance, PHI handling, breach notification, and incident response procedures" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Security &amp; Compliance</h4>
             <p>14 articles covering HIPAA compliance, PHI handling, breach notification, security policies, incident response playbooks, and phishing awareness — the regulatory backbone of healthcare IT.</p>
@@ -266,7 +282,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-helpdesk-book.png" alt="BookStack Help Desk Procedures Manual" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/bookstack-helpdesk-book.png" alt="BookStack Help Desk Procedures Manual with ticket triage workflows, escalation matrices, and troubleshooting guides" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Help Desk Operations</h4>
             <p>12 articles with ticket triage procedures, escalation matrices, SLA guidelines, troubleshooting guides for passwords, networking, printers, VPN, email, and remote support protocols.</p>
@@ -274,7 +290,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-hipaa-article.png" alt="BookStack HIPAA Overview article with detailed compliance documentation" class="showcase-img" loading="lazy">
+          <img src="img/screenshots/bookstack-hipaa-article.png" alt="BookStack HIPAA overview article showing structured documentation with headings, callout boxes, and compliance checklists" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Rich Documentation</h4>
             <p>Professional-grade articles with structured headings, callout boxes, decision tables, step-by-step procedures, and cross-references — the kind of documentation that reduces ticket volume.</p>
