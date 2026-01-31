@@ -702,6 +702,37 @@ a:hover { color: var(--color-primary-dark); }
   background: rgba(255,255,255,0.2);
 }
 
+/* ── Case Study Styling ───────────────────── */
+.case-study {
+  line-height: 1.8;
+}
+
+.case-study p {
+  margin-bottom: 1.2rem;
+}
+
+.case-study strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.case-study .results-list {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  list-style: disc;
+}
+
+.case-study .results-list li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.case-study .results-list strong {
+  color: var(--color-accent);
+}
+
 /* ── Mobile Responsive ────────────────────── */
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
