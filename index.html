@@ -30,7 +30,8 @@
   <link rel="preload" href="css/style.css" as="style">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
   
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="css/style.css">
   
   <!-- JSON-LD Structured Data -->
@@ -219,7 +220,7 @@
             </div>
           </div>
           <div class="demo-hero-img">
-            <img src="img/screenshots/glpi-central.png" alt="GLPI Admin Dashboard showing ticket metrics, asset inventory counts, and SLA compliance tracking" class="demo-img" width="1200" height="800" fetchpriority="high">
+            <picture><source srcset="img/screenshots/glpi-central.webp" type="image/webp"><img src="img/screenshots/glpi-central.png" fetchpriority="high" alt="GLPI Admin Dashboard showing ticket metrics, asset inventory counts, and SLA compliance tracking" class="demo-img" width="1400" height="900"></picture>
           </div>
         </div>
       </div>
@@ -229,7 +230,7 @@
       <div class="showcase-grid">
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-tickets-admin.png" alt="GLPI ticket queue showing healthcare IT support tickets with priority levels, status, and assignment tracking" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-tickets-admin.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-tickets-admin.png" alt="GLPI ticket queue showing healthcare IT support tickets with priority levels, status, and assignment tracking" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Help Desk &amp; Ticketing</h4>
             <p>42 tickets across Hardware, Software, Network, Access, and Security categories. Full lifecycle from New → Assigned → Solved → Closed, with SLA tracking and priority escalation.</p>
@@ -237,7 +238,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-computers.png" alt="GLPI asset inventory displaying 50 computers with detailed specifications, user assignments, warranty dates, and lifecycle status" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-computers.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-computers.png" alt="GLPI asset inventory displaying 50 computers with detailed specifications, user assignments, warranty dates, and lifecycle status" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>IT Asset Management</h4>
             <p>50+ computers, 12 monitors, printers, network gear, and mobile devices — all tracked with specs, assignments, warranty dates, and lifecycle status across 3 locations.</p>
@@ -245,7 +246,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-licenses.png" alt="GLPI software license management dashboard with Office 365, EHR, and healthcare software license tracking" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-licenses.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-licenses.png" alt="GLPI software license management dashboard with Office 365, EHR, and healthcare software license tracking" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Software &amp; License Tracking</h4>
             <p>10 software titles with license counts, assignments, and compliance tracking. Covers Office 365, EHR systems, antivirus, and healthcare-specific applications.</p>
@@ -253,7 +254,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-kb-admin.png" alt="GLPI knowledge base with self-service articles for password resets, VPN setup, and HIPAA compliance procedures" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-kb-admin.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-kb-admin.png" alt="GLPI knowledge base with self-service articles for password resets, VPN setup, and HIPAA compliance procedures" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Knowledge Base</h4>
             <p>10 self-service articles covering password resets, VPN setup, phishing reporting, HIPAA guidelines, and common IT procedures — reducing ticket volume through documentation.</p>
@@ -261,7 +262,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard displaying ticket volume trends, resolution times, asset distribution, and department workload metrics" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-dashboard.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard displaying ticket volume trends, resolution times, asset distribution, and department workload metrics" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Reporting &amp; Metrics</h4>
             <p>Built-in dashboards showing ticket volume, resolution times, asset distribution, and department workload — the data that drives IT operations decisions.</p>
@@ -269,7 +270,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-assets.png" alt="GLPI network equipment and peripheral asset tracking including printers, monitors, and network devices" class="showcase-img" loading="lazy">
+          <img width="1400" height="900" src="img/screenshots/glpi-assets.png" alt="GLPI network equipment and peripheral asset tracking including printers, monitors, and network devices" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Employee Onboarding Workflow</h4>
             <p>26-task, 4-phase onboarding ticket for a new clinical hire — covering account creation, equipment provisioning, compliance training, HIPAA certification, and 30-day follow-up.</p>
@@ -277,7 +278,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/glpi-change-chg001-full.jpg" alt="GLPI ITIL change management showing formal RFC with Change Advisory Board approval, risk assessment matrix, and post-implementation review" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-change-chg001-full.webp" type="image/webp"><img width="406" height="2000" src="img/screenshots/glpi-change-chg001-full.jpg" alt="GLPI ITIL change management showing formal RFC with Change Advisory Board approval, risk assessment matrix, and post-implementation review" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>ITIL Change Management</h4>
             <p>5 formal change requests demonstrating the full ITIL change lifecycle: Major change with CAB approval and PIR, emergency firewall rule, standard firmware upgrade, phased EDR deployment, and low-risk feature rollout.</p>
@@ -323,7 +324,7 @@
             </div>
           </div>
           <div class="demo-hero-img">
-            <img src="img/screenshots/bookstack-shelves.png" alt="BookStack knowledge base homepage displaying 5 organized shelves covering Security & Compliance, Help Desk, Employee Onboarding, Infrastructure, and Clinical Systems" class="demo-img" loading="lazy">
+            <picture><source srcset="img/screenshots/bookstack-shelves.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-shelves.png" alt="BookStack knowledge base homepage displaying 5 organized shelves covering Security & Compliance, Help Desk, Employee Onboarding, Infrastructure, and Clinical Systems" class="demo-img" loading="lazy"></picture>
           </div>
         </div>
       </div>
@@ -333,7 +334,7 @@
       <div class="showcase-grid">
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-security-shelf.png" alt="BookStack Security and Compliance shelf containing 14 articles on HIPAA compliance, PHI handling, breach notification, and incident response procedures" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/bookstack-security-shelf.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-security-shelf.png" alt="BookStack Security and Compliance shelf containing 14 articles on HIPAA compliance, PHI handling, breach notification, and incident response procedures" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Security &amp; Compliance</h4>
             <p>14 articles covering HIPAA compliance, PHI handling, breach notification, security policies, incident response playbooks, and phishing awareness — the regulatory backbone of healthcare IT.</p>
@@ -341,7 +342,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-helpdesk-book.png" alt="BookStack Help Desk Procedures Manual with ticket triage workflows, escalation matrices, and troubleshooting guides" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/bookstack-helpdesk-book.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-helpdesk-book.png" alt="BookStack Help Desk Procedures Manual with ticket triage workflows, escalation matrices, and troubleshooting guides" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Help Desk Operations</h4>
             <p>12 articles with ticket triage procedures, escalation matrices, SLA guidelines, troubleshooting guides for passwords, networking, printers, VPN, email, and remote support protocols.</p>
@@ -349,7 +350,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-hipaa-article.png" alt="BookStack HIPAA overview article showing structured documentation with headings, callout boxes, and compliance checklists" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/bookstack-hipaa-article.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-hipaa-article.png" alt="BookStack HIPAA overview article showing structured documentation with headings, callout boxes, and compliance checklists" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Rich Documentation</h4>
             <p>Professional-grade articles with structured headings, callout boxes, decision tables, step-by-step procedures, and cross-references — the kind of documentation that reduces ticket volume.</p>
@@ -357,7 +358,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-incident-response.png" alt="BookStack incident classification framework showing severity levels, response procedures, and escalation paths for security incidents" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/bookstack-incident-response.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-incident-response.png" alt="BookStack incident classification framework showing severity levels, response procedures, and escalation paths for security incidents" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Incident Response &amp; DR</h4>
             <p>Incident classification framework, response procedures by severity, business continuity plans, backup schedules with RPO/RTO targets, and annual disaster recovery testing protocols.</p>
@@ -365,7 +366,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-hipaa-book.png" alt="BookStack HIPAA Compliance Guide book displaying chapter organization for healthcare regulatory documentation" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/bookstack-hipaa-book.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-hipaa-book.png" alt="BookStack HIPAA Compliance Guide book displaying chapter organization for healthcare regulatory documentation" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Onboarding &amp; Offboarding</h4>
             <p>12 articles covering pre-arrival IT checklists, day-one device setup, account provisioning, software installation, security orientation, offboarding procedures, and BYOD policies.</p>
@@ -373,7 +374,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/bookstack-homepage.png" alt="BookStack homepage displaying recent documentation activity, popular books, and knowledge base navigation" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/bookstack-homepage.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-homepage.png" alt="BookStack homepage displaying recent documentation activity, popular books, and knowledge base navigation" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Clinical Systems &amp; EHR</h4>
             <p>8 articles on IntakeQ EHR support, provider permissions, telehealth troubleshooting, e-prescribing setup, HL7 lab interfaces, and clinical device support — bridging IT and clinical operations.</p>
@@ -419,7 +420,7 @@
             </div>
           </div>
           <div class="demo-hero-img">
-            <img src="img/screenshots/dashboard-hero.jpg" alt="IT Operations Dashboard in dark NOC theme showing real-time ticket queues, security alert monitoring, asset inventory, and SLA compliance metrics" class="demo-img" loading="lazy">
+            <picture><source srcset="img/screenshots/dashboard-hero.webp" type="image/webp"><img width="800" height="5591" src="img/screenshots/dashboard-hero.jpg" alt="IT Operations Dashboard in dark NOC theme showing real-time ticket queues, security alert monitoring, asset inventory, and SLA compliance metrics" class="demo-img" loading="lazy"></picture>
           </div>
         </div>
       </div>
@@ -429,7 +430,7 @@
       <div class="showcase-grid">
 
         <div class="showcase-item">
-          <img src="img/screenshots/dashboard-tickets.png" alt="Priority ticket queue panel displaying 9 active IT support tickets with color-coded urgency badges and aging indicators" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/dashboard-tickets.webp" type="image/webp"><img width="752" height="705" src="img/screenshots/dashboard-tickets.png" alt="Priority ticket queue panel displaying 9 active IT support tickets with color-coded urgency badges and aging indicators" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Priority Ticket Queue</h4>
             <p>Real-time view of open tickets sorted by priority and modification date. Color-coded badges (Critical → Low) with aging indicators — what a help desk lead sees at the start of every shift.</p>
@@ -437,7 +438,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/dashboard-onboarding.png" alt="Employee onboarding tracker showing Dr. Emily Sanchez's clinical onboarding progress with 26-task workflow completion bar" class="showcase-img" loading="lazy">
+          <img width="752" height="505" src="img/screenshots/dashboard-onboarding.png" alt="Employee onboarding tracker showing Dr. Emily Sanchez's clinical onboarding progress with 26-task workflow completion bar" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Onboarding &amp; Offboarding</h4>
             <p>Tracks active employee lifecycle workflows with progress bars. Currently shows Dr. Emily Sanchez's 26-task clinical onboarding and a completed offboarding — connecting HR processes to IT operations.</p>
@@ -445,7 +446,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/dashboard-security.png" alt="Security incident alerts panel displaying 13 incidents with severity badges and real-time threat level gauge for HIPAA compliance monitoring" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/dashboard-security.webp" type="image/webp"><img width="752" height="1197" src="img/screenshots/dashboard-security.png" alt="Security incident alerts panel displaying 13 incidents with severity badges and real-time threat level gauge for HIPAA compliance monitoring" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Security &amp; Incident Alerts</h4>
             <p>13 security-related incidents including phishing campaigns, stolen equipment, VPN issues, and compliance audits. Includes a real-time threat level gauge — critical for HIPAA-regulated environments.</p>
@@ -453,7 +454,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/dashboard-health.png" alt="System health monitoring grid displaying 8 infrastructure services including GLPI, Active Directory, Exchange, and EHR with live status indicators" class="showcase-img" loading="lazy">
+          <img width="752" height="416" src="img/screenshots/dashboard-health.png" alt="System health monitoring grid displaying 8 infrastructure services including GLPI, Active Directory, Exchange, and EHR with live status indicators" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>System Health Monitoring</h4>
             <p>Live health checks for 8 infrastructure services: GLPI, BookStack, Active Directory, Exchange, VPN, IntakeQ EHR, backup, and print servers — with response times and pulsing status indicators.</p>
@@ -461,7 +462,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/dashboard-sla.png" alt="SLA performance metrics displaying 93.9% compliance rate, 3.0h average response time, and 30-day trend chart" class="showcase-img" loading="lazy">
+          <img width="752" height="488" src="img/screenshots/dashboard-sla.png" alt="SLA performance metrics displaying 93.9% compliance rate, 3.0h average response time, and 30-day trend chart" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>SLA Performance Metrics</h4>
             <p>93.9% SLA compliance, 3.0h average response time, 9.4h average resolution time — with a 30-day trend chart. The metrics that demonstrate IT is meeting its commitments to the organization.</p>
@@ -469,7 +470,7 @@
         </div>
 
         <div class="showcase-item">
-          <img src="img/screenshots/dashboard-assets.png" alt="Asset inventory visualization with interactive doughnut chart showing 140 tracked assets across 7 categories and team workload distribution" class="showcase-img" loading="lazy">
+          <img width="752" height="739" src="img/screenshots/dashboard-assets.png" alt="Asset inventory visualization with interactive doughnut chart showing 140 tracked assets across 7 categories and team workload distribution" class="showcase-img" loading="lazy">
           <div class="showcase-info">
             <h4>Asset Inventory &amp; Workload</h4>
             <p>140 tracked assets across 7 categories with interactive doughnut chart, plus team workload distribution showing ticket volume per technician — data-driven resource allocation.</p>
