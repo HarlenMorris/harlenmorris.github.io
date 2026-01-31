@@ -189,6 +189,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// ── Video Toggle Function ──
+function toggleVideo(id) {
+  const el = document.getElementById(id + '-video');
+  if (!el) return;
+  
+  const isHidden = el.style.display === 'none' || !el.style.display;
+  el.style.display = isHidden ? 'block' : 'none';
+  
+  if (isHidden) {
+    el.scrollIntoView({behavior: 'smooth', block: 'center'});
+    // Auto-play the video when shown
+    const video = el.querySelector('video');
+    if (video) {
+      setTimeout(() => video.play(), 500);
+    }
+  } else {
+    // Pause and reset when hidden
+    const video = el.querySelector('video');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+}
+
 // ── Fade-in on scroll ──
 const fadeObserver = new IntersectionObserver(
   (entries) => {

@@ -782,3 +782,27 @@ a:hover { color: var(--color-primary-dark); }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; }
 }
+
+/* ── Video Players ────────────────────────── */
+.demo-video {
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 1rem auto;
+}
+.demo-video video {
+  border-radius: 8px;
+  background: #000;
+  box-shadow: var(--shadow-md);
+}
+.btn-outline-light {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.8);
+  margin-left: 12px;
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+  color: #fff;
+}
