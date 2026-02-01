@@ -381,6 +381,11 @@ a:hover { color: var(--color-primary-dark); }
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
+/* Override .demo-img constraints inside hero sections */
+.demo-hero-img .demo-img {
+  max-width: none;
+}
+
 /* ── Demo Hero (single demo card) ─────────── */
 .demo-hero {
   background: var(--color-card);
@@ -424,8 +429,22 @@ a:hover { color: var(--color-primary-dark); }
   padding: 14px 36px;
   font-size: 1.05rem;
 }
+/* Force consistent thumbnail aspect ratio for all demo hero images.
+   Tall full-page screenshots (e.g. dashboard 800×5591) get cropped
+   instead of blowing up the layout. 16/10 matches the natural ratio
+   of most screenshots (~1400×900) so landscape shots look unchanged. */
+.demo-hero-img {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  border-radius: 8px;
+}
 .demo-hero-img img {
   width: 100%;
+  height: auto;               /* Override HTML height attr so aspect-ratio works */
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
   border-radius: 8px;
   border: 1px solid var(--color-border);
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -458,7 +477,8 @@ a:hover { color: var(--color-primary-dark); }
 }
 .showcase-img {
   width: 100%;
-  height: 200px;
+  height: auto;              /* Override HTML height attr */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: top left;
   display: block;
@@ -863,7 +883,7 @@ a:hover { color: var(--color-primary-dark); }
     margin-bottom: 32px; 
   }
   .demo-card p { font-size: 0.9rem; }
-  .showcase-img { height: 160px; }
+  /* showcase-img uses aspect-ratio now, no fixed height override needed */
 
   /* Touch-friendly buttons */
   .btn { 
@@ -971,7 +991,7 @@ a:hover { color: var(--color-primary-dark); }
     border: 1px solid #ccc;
   }
   .showcase-img {
-    height: 120px;
+    aspect-ratio: 16 / 9;
   }
 }
 
