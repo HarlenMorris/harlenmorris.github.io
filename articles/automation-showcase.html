@@ -314,7 +314,7 @@
     <nav>
         <div class="container">
             <a href="../index.html">← Back to Portfolio</a>
-            <a href="https://github.com/tripolarbearclaudebot-ctrl/harlen-morris-portfolio/tree/main/scripts" target="_blank">View on GitHub →</a>
+            <a href="https://github.com/HarlenMorris/harlenmorris.github.io/tree/main/scripts" target="_blank">View on GitHub →</a>
         </div>
     </nav>
 
@@ -419,95 +419,10 @@ foreach ($group in $groups) {
             </div>
         </article>
 
-        <!-- Script 2: Backup Verification -->
+        <!-- Script 2: Asset Audit Report -->
         <article class="script-card">
             <div class="script-header">
-                <h3>2. Backup Verification & Testing (Bash)</h3>
-                <div class="meta">
-                    <span class="badge">Bash</span>
-                    <span class="badge">Disaster Recovery</span>
-                    <span class="badge">ePHI Protection</span>
-                </div>
-            </div>
-            <div class="script-body">
-                <p>
-                    Validates backup job completion, verifies data integrity via checksums, and tests restore capability. 
-                    Enhanced checks for ePHI database backups ensure HIPAA compliance and recoverability.
-                </p>
-
-                <div class="business-value">
-                    <h4>💼 Business Value</h4>
-                    <ul>
-                        <li><strong>Risk mitigation:</strong> Catches backup failures before data loss occurs</li>
-                        <li><strong>Compliance:</strong> HIPAA requires verifiable backup and recovery procedures</li>
-                        <li><strong>Peace of mind:</strong> Daily verification that restore capability is intact</li>
-                        <li><strong>Alerting:</strong> Automatic notifications when backups fail validation</li>
-                    </ul>
-                </div>
-
-                <h4>Code Sample</h4>
-                <div class="code-container">
-                    <div class="code-header">
-                        <span>backup-verification.sh</span>
-                        <span>Bash</span>
-                    </div>
-                    <pre><code class="language-bash">check_ephi_backup() {
-    local backup_file="$1"
-    
-    log "INFO" "=== HIPAA-Critical ePHI Backup Check ==="
-    
-    local checks_passed=0
-    local checks_total=5
-    
-    # Check 1: File exists
-    if [ -f "$backup_file" ]; then
-        log "SUCCESS" "ePHI backup file exists"
-        ((checks_passed++))
-    else
-        log "ERROR" "ePHI backup file MISSING - CRITICAL!"
-        send_alert "CRITICAL: ePHI Backup Missing"
-        return 1
-    fi
-    
-    # Check 2: Age check (stricter - max 12h for ePHI)
-    local file_age_hours=$(( ( $(date +%s) - $(stat -c %Y "$backup_file") ) / 3600 ))
-    if [ $file_age_hours -le 12 ]; then
-        log "SUCCESS" "ePHI backup age: ${file_age_hours}h (within 12h requirement)"
-        ((checks_passed++))
-    fi
-    
-    # Check 3: Checksum verification
-    if sha256sum -c "${backup_file}.sha256" --quiet 2>/dev/null; then
-        log "SUCCESS" "ePHI backup checksum verified"
-        ((checks_passed++))
-    fi
-    
-    # Check 4: Encryption check (ePHI must be encrypted at rest)
-    if [[ "$backup_file" == *.gpg ]] || [[ "$backup_file" == *.enc ]]; then
-        log "SUCCESS" "ePHI backup is encrypted"
-        ((checks_passed++))
-    fi
-}</code></pre>
-                </div>
-
-                <h4>Sample Output</h4>
-                <div class="sample-output">
-<span class="info">[2026-01-31 02:00:15] [INFO] Backup Verification Starting</span>
-<span class="info">[2026-01-31 02:00:16] [INFO] --- Checking file-server backup ---</span>
-<span class="success">[2026-01-31 02:00:17] [SUCCESS] file-server age: 3h (within threshold)</span>
-<span class="success">[2026-01-31 02:00:22] [SUCCESS] file-server checksum verified</span>
-<span class="success">[2026-01-31 02:00:25] [SUCCESS] file-server restore test passed</span>
-<span class="info">[2026-01-31 02:00:26] [INFO] === HIPAA-Critical ePHI Backup Check ===</span>
-<span class="success">[2026-01-31 02:00:27] [SUCCESS] ePHI backup checks: 5/5 passed</span>
-<span class="success">[2026-01-31 02:00:35] [SUCCESS] All backup verifications passed!</span>
-                </div>
-            </div>
-        </article>
-
-        <!-- Script 3: Asset Audit Report -->
-        <article class="script-card">
-            <div class="script-header">
-                <h3>3. Asset Audit Report Generator (Python)</h3>
+                <h3>2. Asset Audit Report Generator (Python)</h3>
                 <div class="meta">
                     <span class="badge">Python</span>
                     <span class="badge">GLPI API</span>
@@ -584,16 +499,16 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
                 </div>
 
                 <p style="margin-top: 20px;">
-                    <a href="../../scripts/asset-audit-2026-01-31.html" target="_blank" 
+                    <a href="../scripts/asset-audit-2026-01-31.html" target="_blank" 
                        style="color: #667eea; font-weight: 600;">→ View full generated HTML report</a>
                 </p>
             </div>
         </article>
 
-        <!-- Script 4: Security Compliance Check -->
+        <!-- Script 3: Security Compliance Check -->
         <article class="script-card">
             <div class="script-header">
-                <h3>4. HIPAA Security Compliance Audit (Bash)</h3>
+                <h3>3. HIPAA Security Compliance Audit (Bash)</h3>
                 <div class="meta">
                     <span class="badge">Bash</span>
                     <span class="badge">Security</span>
@@ -665,10 +580,10 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
             </div>
         </article>
 
-        <!-- Script 5: Offboarding Automation -->
+        <!-- Script 4: Offboarding Automation -->
         <article class="script-card">
             <div class="script-header">
-                <h3>5. Employee Offboarding Automation (Python)</h3>
+                <h3>4. Employee Offboarding Automation (Python)</h3>
                 <div class="meta">
                     <span class="badge">Python</span>
                     <span class="badge">GLPI Integration</span>
@@ -749,10 +664,10 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
             </div>
         </article>
 
-        <!-- Script 6: Network Health Monitor -->
+        <!-- Script 5: Network Health Monitor -->
         <article class="script-card">
             <div class="script-header">
-                <h3>6. Network Health Monitoring System (Python)</h3>
+                <h3>5. Network Health Monitoring System (Python)</h3>
                 <div class="meta">
                     <span class="badge">Python</span>
                     <span class="badge">Monitoring</span>
@@ -870,7 +785,7 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
                 All scripts are available on GitHub with full source code and documentation. 
                 The asset audit script runs against my live GLPI instance for real-world demonstration.
             </p>
-            <a href="https://github.com/tripolarbearclaudebot-ctrl/harlen-morris-portfolio/tree/main/scripts" 
+            <a href="https://github.com/HarlenMorris/harlenmorris.github.io/tree/main/scripts" 
                target="_blank"
                style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
                       color: white; padding: 15px 40px; border-radius: 6px; text-decoration: none; 
@@ -886,7 +801,7 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
         <p style="margin-top: 10px;">
             <a href="../index.html">Portfolio Home</a> | 
             <a href="mailto:flaminninjaassassin@gmail.com">Contact</a> | 
-            <a href="https://github.com/tripolarbearclaudebot-ctrl/harlen-morris-portfolio" target="_blank">GitHub</a>
+            <a href="https://github.com/HarlenMorris/harlenmorris.github.io" target="_blank">GitHub</a>
         </p>
         <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
             © 2026 Harlen Morris. All automation scripts are production-ready tools designed for healthcare IT environments.
