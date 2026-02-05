@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Microsoft 365 License Audit (Sample)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f5f7fb; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; }
+        h1 { color: #1f3b6d; }
+        h2 { color: #1f3b6d; margin-top: 25px; }
+        .subtitle { color: #6c757d; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #e0e6ed; }
+        th { background: #f8f9fb; }
+        ul { margin-top: 10px; }
+        .note { margin-top: 20px; font-size: 0.9rem; color: #6c757d; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Microsoft 365 License Audit</h1>
+    <div class="subtitle">Generated: 2026-02-05 14:58 | MSP Cost Optimization</div>
+
+    <h2>License Utilization Summary</h2>
+    <table>
+        <tr><th>SKU</th><th>Total</th><th>Assigned</th><th>Available</th><th>Unit Cost ($)</th><th>Monthly Cost ($)</th></tr>
+        <tr><td>BUSINESS_PREMIUM</td><td>150</td><td>138</td><td>12</td><td>22.00</td><td>3036.00</td></tr>
+        <tr><td>ENTERPRISEPACK</td><td>60</td><td>55</td><td>5</td><td>36.00</td><td>1980.00</td></tr>
+        <tr><td>EXCHANGESTANDARD</td><td>40</td><td>29</td><td>11</td><td>8.00</td><td>232.00</td></tr>
+    </table>
+
+    <h2>Users with Multiple Licenses (Top 10)</h2>
+    <table>
+        <tr><th>Name</th><th>UPN</th><th>License Count</th></tr>
+        <tr><td>Emily Sanchez</td><td>esanchez@northwoodshealth.org</td><td>2</td></tr>
+        <tr><td>Marcus Lee</td><td>mlee@northwoodshealth.org</td><td>2</td></tr>
+    </table>
+
+    <h2>Disabled Users Still Licensed (Top 10)</h2>
+    <table>
+        <tr><th>Name</th><th>UPN</th><th>License Count</th></tr>
+        <tr><td>John Doe</td><td>jdoe@northwoodshealth.org</td><td>1</td></tr>
+    </table>
+
+    <h2>Optimization Recommendations</h2>
+    <ul>
+        <li>Reclaim 1 license from disabled accounts</li>
+        <li>Review 2 users with multiple SKUs for redundancy</li>
+        <li>Consider downgrading mail-only users to Exchange Online Plan 1</li>
+    </ul>
+
+    <p class="note">Sample output for portfolio demonstration. Licensing reviews should align with HIPAA least-privilege controls and MFA enforcement.</p>
+</div>
+</body>
+</html>

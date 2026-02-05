@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Ticket Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f5f7fb; margin: 0; padding: 0; }
+        .container { max-width: 1100px; margin: 30px auto; background: white; padding: 30px; border-radius: 8px; }
+        h1 { color: #1f3b6d; margin-bottom: 0; }
+        h2 { color: #1f3b6d; margin-top: 30px; }
+        .subtitle { color: #5b6b80; margin-top: 5px; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .summary-card { background: #f0f4ff; padding: 15px; border-radius: 8px; }
+        .summary-card h3 { margin: 0; font-size: 1rem; color: #2c3e50; }
+        .summary-card p { margin: 5px 0 0; font-size: 1.6rem; font-weight: 700; color: #1f3b6d; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border-bottom: 1px solid #e0e6ed; text-align: left; padding: 10px; }
+        th { background: #f8f9fb; }
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.85rem; }
+        .badge-good { background: #e6f4ea; color: #1e7e34; }
+        .badge-warn { background: #fff4e5; color: #ad5e00; }
+        .badge-bad { background: #fdecea; color: #b02a37; }
+        .note { margin-top: 25px; font-size: 0.9rem; color: #6c7a89; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Ticket Operations Report</h1>
+        <div class="subtitle">Northwoods Health System | Jan 29, 2026 – Feb 05, 2026</div>
+
+        <h2>Executive Summary</h2>
+        <div class="summary-grid">
+            <div class="summary-card">
+                <h3>Tickets Opened</h3>
+                <p>9</p>
+            </div>
+            <div class="summary-card">
+                <h3>Tickets Closed</h3>
+                <p>5</p>
+            </div>
+            <div class="summary-card">
+                <h3>Pending</h3>
+                <p>0</p>
+            </div>
+            <div class="summary-card">
+                <h3>SLA Compliance</h3>
+                <p>0.0%</p>
+            </div>
+        </div>
+
+        <h2>SLA Compliance</h2>
+        <table>
+            <tr><th>Compliant</th><th>Non-Compliant</th><th>Unknown</th></tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>9</td>
+            </tr>
+        </table>
+
+        <h2>Technician Performance</h2>
+        <table>
+            <tr><th>Technician</th><th>Total Tickets</th><th>Resolved</th><th>Avg Resolution (hrs)</th></tr>
+            <tr><td>Unassigned</td><td>9</td><td>4</td><td>9.88</td></tr>
+        </table>
+
+        <h2>Client Satisfaction</h2>
+        <table>
+            <tr><th>Surveys Completed</th><th>Average Score (1-5)</th><th>Trend</th></tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>No surveys completed this period</td>
+            </tr>
+        </table>
+
+        <p class="note">
+            Note: Report excludes patient-identifying data to maintain HIPAA confidentiality.            SLA compliance is based on GLPI due dates and resolution timestamps.
+        </p>
+    </div>
+</body>
+</html>

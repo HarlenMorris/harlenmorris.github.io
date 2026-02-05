@@ -1,0 +1,10 @@
+Ticket ID,Title,Status,Opened,Closed,Assigned Technician,SLA Due Date
+48,IR-004: ERADICATION — Malware Removal & System Hardening,Closed,2026-01-29 19:00:00,2026-01-30 14:00:00,Unassigned,
+49,IR-005: RECOVERY — System Restoration & Monitored Reintroduction,Closed,2026-01-30 14:30:00,2026-01-31 09:00:00,Unassigned,
+50,IR-006: LESSONS LEARNED — Post-Incident Review & Improvements,Closed,2026-01-31 10:00:00,2026-01-31 12:00:00,Unassigned,
+51,Request: New Laptop for Physical Therapy Department,Assigned,2026-01-31 17:11:25,,Unassigned,
+52,Request: VPN Access for Remote Billing Staff,Assigned,2026-01-31 17:11:25,,Unassigned,
+53,Request: Epic EHR Access — New Provider Dr. James Liu,Assigned,2026-01-31 17:11:26,,Unassigned,
+54,Request: Adobe Creative Suite License,Assigned,2026-01-31 17:11:26,,Unassigned,
+55,Request: Department Transfer IT Changes — Sarah Kim (Billing → HR),Planned,2026-01-31 17:11:26,,Unassigned,
+56,Incident: 3rd Floor Printer Not Responding,Solved,2026-01-31 17:11:26,2026-01-31 17:11:26,Unassigned,

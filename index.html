@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#2563eb">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
   <link rel="canonical" href="https://harlenmorris.github.io/">
   <title>Harlen Morris — IT Professional</title>
   <meta name="description" content="IT professional specializing in Healthcare IT, ITAM, Help Desk, and HIPAA compliance. Live demos: GLPI ITSM, BookStack Knowledge Base, and IT Operations Dashboard with real-time monitoring, SLA metrics, and security alerts.">
@@ -23,16 +24,230 @@
   <!-- Resource Hints for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Critical CSS (above-the-fold) -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-bg: #ffffff;
+      --color-bg-alt: #f8f9fa;
+      --color-text: #1a1a2e;
+      --color-text-muted: #5a5a7a;
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-primary-light: #dbeafe;
+      --color-accent: #059669;
+      --color-border: #e2e8f0;
+      --color-card: #ffffff;
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --radius: 10px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+      --max-width: 1100px;
+    }
+    [data-theme="dark"] {
+      --color-bg: #0d1117;
+      --color-bg-alt: #161b22;
+      --color-text: #e6edf3;
+      --color-text-muted: #8b949e;
+      --color-primary: #58a6ff;
+      --color-primary-dark: #79c0ff;
+      --color-primary-light: #1a2332;
+      --color-accent: #3fb950;
+      --color-border: #30363d;
+      --color-card: #161b22;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 14px rgba(0,0,0,0.3);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    [data-theme="dark"] .nav { background: rgba(13, 17, 23, 0.95); }
+    [data-theme="dark"] .hero {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+    }
+    [data-theme="dark"] .quick-bar {
+      background: #1a2332;
+      border-bottom: 1px solid var(--color-border);
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    a { color: var(--color-primary); text-decoration: none; transition: color .2s; }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all .2s;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+    .quick-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 101;
+      background: var(--color-primary);
+      color: #fff;
+    }
+    .quick-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      height: 36px;
+    }
+    .quick-link {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .quick-short { display: none; }
+    .nav {
+      position: fixed;
+      top: 36px; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      letter-spacing: -0.5px;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--color-text-muted);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color .2s;
+    }
+    .btn-nav {
+      padding: 8px 20px !important;
+      background: var(--color-primary);
+      color: #fff !important;
+      border-radius: var(--radius);
+    }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-text);
+      margin: 5px 0;
+      transition: .3s;
+    }
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.3s;
+      margin-left: 16px;
+    }
+    .hero {
+      padding: 176px 0 80px;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 50%, #f0fdf4 100%);
+    }
+    .hero-content { max-width: 700px; }
+    .hero-tag {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: var(--color-text);
+    }
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--color-text-muted);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  </style>
   
   <!-- Preload Critical Resources -->
   <link rel="preload" href="css/style.css" as="style">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2" as="font" type="font/woff2" crossorigin>
   
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
   
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -289,7 +504,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="1400" height="900" src="img/screenshots/glpi-assets.png" alt="GLPI network equipment and peripheral asset tracking including printers, monitors, and network devices" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-assets.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-assets.png" alt="GLPI network equipment and peripheral asset tracking including printers, monitors, and network devices" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Employee Onboarding Workflow</h4>
             <p>26-task, 4-phase onboarding ticket for a new clinical hire — covering account creation, equipment provisioning, compliance training, HIPAA certification, and 30-day follow-up.</p>
@@ -313,7 +528,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="1400" height="900" src="img/screenshots/glpi-service-catalog.png" alt="GLPI ITIL service catalog with hierarchical categories for hardware requests, software, access management, and support" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-service-catalog.webp" type="image/webp"><img width="770" height="700" src="img/screenshots/glpi-service-catalog.png" alt="GLPI ITIL service catalog with hierarchical categories for hardware requests, software, access management, and support" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>IT Service Catalog</h4>
             <p>27 ITIL categories with 6 ticket templates enabling self-service IT requests. Covers hardware procurement, software licensing, EHR access (with HIPAA training verification), VPN provisioning, and employee lifecycle management — complete with SLA targets and approval workflows.</p>
@@ -321,7 +536,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="1400" height="900" src="img/screenshots/glpi-service-request.png" alt="GLPI EHR access request ticket showing HIPAA compliance verification workflow with training certificate and manager approval" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/glpi-service-request.webp" type="image/webp"><img width="770" height="1778" src="img/screenshots/glpi-service-request.png" alt="GLPI EHR access request ticket showing HIPAA compliance verification workflow with training certificate and manager approval" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Cross-System Integration</h4>
             <p>26 bidirectional references linking GLPI tickets to BookStack knowledge base articles. Ticket solutions reference relevant procedures, KB articles link to real-world examples — demonstrating how an integrated IT ecosystem reduces resolution time and improves knowledge sharing.</p>
@@ -481,7 +696,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="752" height="505" src="img/screenshots/dashboard-onboarding.png" alt="Employee onboarding tracker showing Dr. Emily Sanchez's clinical onboarding progress with 26-task workflow completion bar" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/dashboard-onboarding.webp" type="image/webp"><img width="752" height="505" src="img/screenshots/dashboard-onboarding.png" alt="Employee onboarding tracker showing Dr. Emily Sanchez's clinical onboarding progress with 26-task workflow completion bar" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Onboarding &amp; Offboarding</h4>
             <p>Tracks active employee lifecycle workflows with progress bars. Currently shows Dr. Emily Sanchez's 26-task clinical onboarding and a completed offboarding — connecting HR processes to IT operations.</p>
@@ -497,7 +712,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="752" height="416" src="img/screenshots/dashboard-health.png" alt="System health monitoring grid displaying 8 infrastructure services including GLPI, Active Directory, Exchange, and EHR with live status indicators" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/dashboard-health.webp" type="image/webp"><img width="752" height="416" src="img/screenshots/dashboard-health.png" alt="System health monitoring grid displaying 8 infrastructure services including GLPI, Active Directory, Exchange, and EHR with live status indicators" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>System Health Monitoring</h4>
             <p>Live health checks for 8 infrastructure services: GLPI, BookStack, Active Directory, Exchange, VPN, IntakeQ EHR, backup, and print servers — with response times and pulsing status indicators.</p>
@@ -505,7 +720,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="752" height="488" src="img/screenshots/dashboard-sla.png" alt="SLA performance metrics displaying 93.9% compliance rate, 3.0h average response time, and 30-day trend chart" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/dashboard-sla.webp" type="image/webp"><img width="752" height="488" src="img/screenshots/dashboard-sla.png" alt="SLA performance metrics displaying 93.9% compliance rate, 3.0h average response time, and 30-day trend chart" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>SLA Performance Metrics</h4>
             <p>93.9% SLA compliance, 3.0h average response time, 9.4h average resolution time — with a 30-day trend chart. The metrics that demonstrate IT is meeting its commitments to the organization.</p>
@@ -513,7 +728,7 @@
         </div>
 
         <div class="showcase-item">
-          <img width="752" height="739" src="img/screenshots/dashboard-assets.png" alt="Asset inventory visualization with interactive doughnut chart showing 140 tracked assets across 7 categories and team workload distribution" class="showcase-img" loading="lazy">
+          <picture><source srcset="img/screenshots/dashboard-assets.webp" type="image/webp"><img width="752" height="739" src="img/screenshots/dashboard-assets.png" alt="Asset inventory visualization with interactive doughnut chart showing 140 tracked assets across 7 categories and team workload distribution" class="showcase-img" loading="lazy"></picture>
           <div class="showcase-info">
             <h4>Asset Inventory &amp; Workload</h4>
             <p>140 tracked assets across 7 categories with interactive doughnut chart, plus team workload distribution showing ticket volume per technician — data-driven resource allocation.</p>

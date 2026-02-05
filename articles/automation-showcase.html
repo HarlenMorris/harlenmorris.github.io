@@ -221,6 +221,21 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        .report-preview {
+            margin: 20px 0;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e0e6ed;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .report-preview iframe {
+            width: 100%;
+            height: 360px;
+            border: none;
+        }
+
         .sample-output .success {
             color: #4ec9b0;
         }
@@ -332,6 +347,8 @@
                 These scripts demonstrate my approach to IT automation: <strong>secure, auditable, and production-ready</strong>. 
                 Each tool addresses real-world challenges I've encountered in healthcare IT operations.
             </p>
+            <p><strong>Scripts Overview:</strong> 8 production-ready automations across PowerShell, Python, and Bash — covering onboarding,
+                compliance, reporting, monitoring, and licensing optimization.</p>
             <p><strong>Key principles in these scripts:</strong></p>
             <ul>
                 <li>✅ <strong>HIPAA compliance</strong> — Audit logging, encryption checks, ePHI protection</li>
@@ -747,6 +764,227 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
             </div>
         </article>
 
+        <!-- Script 6: Ticket Report Generator -->
+        <article class="script-card">
+            <div class="script-header">
+                <h3>6. Weekly Ticket Report Generator (Python)</h3>
+                <div class="meta">
+                    <span class="badge">Python</span>
+                    <span class="badge">GLPI API</span>
+                    <span class="badge">Reporting</span>
+                </div>
+            </div>
+            <div class="script-body">
+                <p>
+                    Connects to the live GLPI instance and produces MSP-ready weekly reports with ticket volume, SLA
+                    compliance, technician performance, and client satisfaction trends. Outputs both HTML executive
+                    summaries and CSV data for analytics.
+                </p>
+
+                <div class="business-value">
+                    <h4>💼 Business Value</h4>
+                    <ul>
+                        <li><strong>Weekly visibility:</strong> MSP status meetings supported with real metrics</li>
+                        <li><strong>SLA compliance:</strong> Early warning when response targets slip</li>
+                        <li><strong>Technician accountability:</strong> Resolution trends by tech</li>
+                        <li><strong>Client satisfaction:</strong> Tracks survey sentiment over time</li>
+                    </ul>
+                </div>
+
+                <h4>Code Sample</h4>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>ticket-report-generator.py</span>
+                        <span>Python</span>
+                    </div>
+                    <pre><code class="language-python">def calculate_sla_compliance(tickets: List[Dict], end: datetime) -> Dict[str, int]:
+    """Calculate SLA compliance based on due date vs solved date"""
+    compliant = 0
+    non_compliant = 0
+    unknown = 0
+
+    for ticket in tickets:
+        due_date = parse_date(ticket.get("due_date"))
+        solved_date = parse_date(ticket.get("solvedate"))
+
+        if due_date and solved_date:
+            if solved_date &lt;= due_date:
+                compliant += 1
+            else:
+                non_compliant += 1
+        elif due_date and ticket.get("status") in (1, 2, 3, 4):
+            if end &lt;= due_date:
+                compliant += 1
+            else:
+                non_compliant += 1
+        else:
+            unknown += 1
+
+    total = compliant + non_compliant + unknown
+    compliance_rate = round((compliant / total) * 100, 2) if total else 0
+    return {"compliant": compliant, "non_compliant": non_compliant, "unknown": unknown, "rate": compliance_rate}
+</code></pre>
+                </div>
+
+                <h4>Sample Output</h4>
+                <div class="sample-output">
+<span class="info">2026-02-05 15:08:06 [INFO] Ticket Report Generator v1.0.0</span>
+<span class="success">2026-02-05 15:08:06 [INFO] ✓ GLPI session initialized successfully</span>
+<span class="info">2026-02-05 15:08:06 [INFO] ✓ Tickets retrieved: 56</span>
+<span class="success">2026-02-05 15:08:06 [INFO] ✓ Report generated: ticket-report-2026-02-05.html</span>
+<span class="success">2026-02-05 15:08:06 [INFO] ✓ CSV export saved: ticket-report-2026-02-05.csv</span>
+                </div>
+
+                <h4>Report Preview</h4>
+                <div class="report-preview">
+                    <iframe src="../scripts/ticket-report-2026-02-05.html" title="Ticket Report Preview"></iframe>
+                </div>
+                <p>
+                    <a href="../scripts/ticket-report-2026-02-05.html" target="_blank" style="color: #667eea; font-weight: 600;">→ View full HTML report</a>
+                    &nbsp;|&nbsp;
+                    <a href="../scripts/ticket-report-2026-02-05.csv" target="_blank" style="color: #667eea; font-weight: 600;">Download CSV</a>
+                </p>
+            </div>
+        </article>
+
+        <!-- Script 7: Active Directory Health Check -->
+        <article class="script-card">
+            <div class="script-header">
+                <h3>7. Active Directory Health Audit (PowerShell)</h3>
+                <div class="meta">
+                    <span class="badge">PowerShell</span>
+                    <span class="badge">Active Directory</span>
+                    <span class="badge">Health Audit</span>
+                </div>
+            </div>
+            <div class="script-body">
+                <p>
+                    Performs a full Active Directory health assessment: replication status, FSMO roles, DNS health,
+                    GPO consistency, lockout tracking, password policy compliance, and stale account detection.
+                    Outputs an HTML report with traffic-light indicators.
+                </p>
+
+                <div class="business-value">
+                    <h4>💼 Business Value</h4>
+                    <ul>
+                        <li><strong>Downtime prevention:</strong> Detects replication issues before authentication breaks</li>
+                        <li><strong>Security posture:</strong> Highlights weak password policy settings</li>
+                        <li><strong>Operational hygiene:</strong> Identifies stale accounts that should be disabled</li>
+                        <li><strong>Audit-ready:</strong> Clear, executive-friendly HTML report for compliance reviews</li>
+                    </ul>
+                </div>
+
+                <h4>Code Sample</h4>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>ad-health-check.ps1</span>
+                        <span>PowerShell</span>
+                    </div>
+                    <pre><code class="language-powershell">$replicationErrors = 0
+$dcs = Get-ADDomainController -Filter *
+foreach ($dc in $dcs) {
+    $replications = Get-ADReplicationPartnerMetadata -Target $dc.HostName -Scope Domain
+    $replicationErrors += ($replications | Where-Object { $_.LastReplicationResult -ne 0 }).Count
+}
+
+$status = if ($replicationErrors -eq 0) { "OK" } elseif ($replicationErrors -le 2) { "WARN" } else { "FAIL" }
+$results += [PSCustomObject]@{
+    Check = "DC Replication Status"
+    Status = $status
+    Details = "$replicationErrors replication errors detected across $($dcs.Count) DC(s)."
+}
+</code></pre>
+                </div>
+
+                <h4>Sample Output</h4>
+                <div class="sample-output">
+<span class="success">[OK] DC Replication Status — 0 errors detected across 2 DCs</span>
+<span class="success">[OK] FSMO Role Holder Verification — all roles assigned</span>
+<span class="warning">[WARN] GPO Consistency Check — 3 policies with disabled settings</span>
+<span class="warning">[WARN] Stale Accounts — 14 computers, 8 users inactive</span>
+                </div>
+
+                <h4>Report Preview</h4>
+                <div class="report-preview">
+                    <iframe src="../scripts/ad-health-report-sample.html" title="AD Health Report Preview"></iframe>
+                </div>
+                <p>
+                    <a href="../scripts/ad-health-report-sample.html" target="_blank" style="color: #667eea; font-weight: 600;">→ View full HTML report</a>
+                </p>
+            </div>
+        </article>
+
+        <!-- Script 8: Microsoft 365 License Audit -->
+        <article class="script-card">
+            <div class="script-header">
+                <h3>8. Microsoft 365 License Audit (PowerShell)</h3>
+                <div class="meta">
+                    <span class="badge">PowerShell</span>
+                    <span class="badge">Microsoft 365</span>
+                    <span class="badge">Cost Optimization</span>
+                </div>
+            </div>
+            <div class="script-body">
+                <p>
+                    Audits M365 license usage by SKU, flags users with multiple licenses, identifies disabled accounts
+                    still consuming licenses, and estimates monthly costs. Generates HTML and CSV outputs for finance
+                    and MSP client reporting.
+                </p>
+
+                <div class="business-value">
+                    <h4>💼 Business Value</h4>
+                    <ul>
+                        <li><strong>Cost control:</strong> Highlights reclaimable licenses and overspend</li>
+                        <li><strong>Security:</strong> Ensures disabled accounts are not consuming access</li>
+                        <li><strong>Visibility:</strong> SKU-level utilization for QBRs and budgeting</li>
+                        <li><strong>Compliance:</strong> Supports least-privilege reviews in HIPAA environments</li>
+                    </ul>
+                </div>
+
+                <h4>Code Sample</h4>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>m365-license-audit.ps1</span>
+                        <span>PowerShell</span>
+                    </div>
+                    <pre><code class="language-powershell">$skuSummary = foreach ($sku in $skus) {
+    $available = $sku.ActiveUnits - $sku.ConsumedUnits
+    $cost = Get-LicenseCost $sku.SkuPartNumber
+    [PSCustomObject]@{
+        Sku = $sku.SkuPartNumber
+        Total = $sku.ActiveUnits
+        Assigned = $sku.ConsumedUnits
+        Available = $available
+        MonthlyCost = ($sku.ConsumedUnits * $cost)
+        UnitCost = $cost
+    }
+}
+
+$multiLicenseUsers = $users | Where-Object { $_.Licenses.Count -gt 1 }
+$disabledLicensedUsers = $users | Where-Object { $_.BlockCredential -eq $true -and $_.Licenses.Count -gt 0 }
+</code></pre>
+                </div>
+
+                <h4>Sample Output</h4>
+                <div class="sample-output">
+<span class="info">[INFO] Starting Microsoft 365 License Audit</span>
+<span class="success">[INFO] ✓ License SKUs analyzed: 3</span>
+<span class="warning">[WARN] 1 disabled account consuming licenses</span>
+<span class="success">[INFO] ✓ CSV summary exported: M365-License-Summary.csv</span>
+                </div>
+
+                <h4>Report Preview</h4>
+                <div class="report-preview">
+                    <iframe src="../scripts/m365-license-audit-2026-02-05.html" title="M365 License Audit Preview"></iframe>
+                </div>
+                <p>
+                    <a href="../scripts/m365-license-audit-2026-02-05.html" target="_blank" style="color: #667eea; font-weight: 600;">→ View full HTML report</a>
+                    &nbsp;|&nbsp;
+                    <a href="../scripts/m365-license-summary-2026-02-05.csv" target="_blank" style="color: #667eea; font-weight: 600;">Download CSV</a>
+                </p>
+            </div>
+        </article>
+
         <!-- Technologies Used -->
         <section class="intro">
             <h2>Technologies & Skills Demonstrated</h2>
@@ -783,7 +1021,7 @@ def analyze_warranty_status(assets: List[Dict]) -> Dict[str, List]:
             <h2>See These Scripts in Action</h2>
             <p style="margin-bottom: 25px;">
                 All scripts are available on GitHub with full source code and documentation. 
-                The asset audit script runs against my live GLPI instance for real-world demonstration.
+                The asset audit and ticket report scripts run against my live GLPI instance for real-world demonstration.
             </p>
             <a href="https://github.com/HarlenMorris/harlenmorris.github.io/tree/main/scripts" 
                target="_blank"
