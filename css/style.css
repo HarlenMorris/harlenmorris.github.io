@@ -561,6 +561,60 @@ a:hover { color: var(--color-primary-dark); }
   .showcase-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Screenshot Album ─────────────────────── */
+.screenshot-album {
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+.album-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.album-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.toggle-arrow {
+  transition: transform 0.2s;
+}
+.screenshot-album.expanded .toggle-arrow {
+  transform: rotate(90deg);
+}
+.album-strip {
+  display: none;
+  gap: 12px;
+  padding: 12px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.screenshot-album.expanded .album-strip {
+  display: flex;
+}
+.album-thumb {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.album-thumb:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
 /* ── Articles Grid ────────────────────────── */
 .articles-grid {
   display: grid;

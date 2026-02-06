@@ -413,8 +413,7 @@
     <div class="container">
       <h2 class="section-title">Live Demos</h2>
       <p class="section-desc">
-        Three fully deployed IT systems I built from scratch for a simulated healthcare organization.
-        Explore them live or browse the showcases below.
+        Four fully deployed IT systems I built from scratch. Click any demo to explore it live.
       </p>
 
       <!-- Single GLPI Demo Card -->
@@ -425,20 +424,11 @@
             <h3>GLPI ITSM — Northwoods Health System</h3>
             <p class="demo-subtitle">Help Desk · Asset Management · Knowledge Base · Change Management · Compliance Workflows</p>
             <div class="case-study">
-              <p><strong>The Challenge:</strong> Northwoods Health System — a multi-site behavioral health organization with 3 locations and 100+ employees — had no centralized IT tracking. Asset requests went through email chains, tickets were tracked in spreadsheets, and there was no visibility into SLA compliance or security incidents. HIPAA audits required manual evidence gathering that took days.</p>
+              <p><strong>The Challenge:</strong> Multi-site healthcare org with no centralized IT tracking — tickets in spreadsheets, assets untracked, HIPAA audits taking days.</p>
               
-              <p><strong>The Approach:</strong> I evaluated several ITSM platforms (Jira, ServiceNow, Freshdesk) and selected GLPI for its comprehensive feature set covering ticketing, asset management, knowledge base, and change management in a single open-source platform — critical for a healthcare org with limited IT budget.</p>
+              <p><strong>The Solution:</strong> Full GLPI deployment: 56+ tickets, 140+ assets, 5 ITIL change requests, 27-category service catalog, NIST incident response simulation, and 26 cross-system KB integrations.</p>
               
-              <p><strong>The Solution:</strong> Deployed a fully configured GLPI environment with 56+ tickets demonstrating complete lifecycle management, 5 ITIL change management requests (Major, Normal, Emergency, Standard/Pre-approved), 140+ tracked IT assets across 7 categories, a 27-category ITIL service catalog with self-service request templates, a full NIST incident response simulation, 26 cross-system integrations with the BookStack knowledge base, and a formal employee onboarding workflow with multi-level approvals and HIPAA compliance tasks.</p>
-              
-              <p><strong>The Results:</strong></p>
-              <ul class="results-list">
-                <li>Centralized tracking for all IT operations across 3 locations</li>
-                <li><strong>93.9% SLA compliance</strong> with measurable response/resolution metrics</li>
-                <li>Self-service KB reducing routine ticket volume</li>
-                <li>Audit-ready documentation for HIPAA compliance reviews</li>
-                <li>Complete asset lifecycle visibility from procurement to retirement</li>
-              </ul>
+              <p><strong>The Results:</strong> <strong>93.9% SLA compliance</strong>, centralized ops across 3 locations, audit-ready HIPAA documentation, and self-service KB reducing ticket volume.</p>
             </div>
             <div class="demo-launch">
               <a href="#" class="btn btn-primary btn-lg" id="glpi-link">Launch Live Demo →</a>
@@ -459,90 +449,18 @@
         </div>
       </div>
 
-      <!-- Showcase Grid -->
-      <h3 class="showcase-title">What's Inside</h3>
-      <div class="showcase-grid">
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-tickets-admin.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-tickets-admin.png" alt="GLPI ticket queue showing healthcare IT support tickets with priority levels, status, and assignment tracking" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Help Desk &amp; Ticketing</h4>
-            <p>56+ tickets across Hardware, Software, Network, Access, and Security categories. Full lifecycle from New → Assigned → Solved → Closed, with SLA tracking, priority escalation, and ITIL service catalog integration.</p>
-          </div>
+      <div class="screenshot-album">
+        <button class="album-toggle" onclick="this.parentElement.classList.toggle('expanded')">
+          📸 Screenshots (6) <span class="toggle-arrow">▸</span>
+        </button>
+        <div class="album-strip">
+          <picture><source srcset="img/screenshots/glpi-central.webp" type="image/webp"><img src="img/screenshots/glpi-central.png" alt="GLPI central dashboard" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/glpi-tickets-admin.webp" type="image/webp"><img src="img/screenshots/glpi-tickets-admin.png" alt="Ticket queue with priorities" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/glpi-change-chg001-full.webp" type="image/webp"><img src="img/screenshots/glpi-change-chg001-full.jpg" alt="ITIL change management" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/glpi-computers.webp" type="image/webp"><img src="img/screenshots/glpi-computers.png" alt="Asset inventory" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/glpi-incident-response.webp" type="image/webp"><img src="img/screenshots/glpi-incident-response.png" alt="NIST incident response" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/glpi-service-catalog.webp" type="image/webp"><img src="img/screenshots/glpi-service-catalog.png" alt="IT service catalog" class="album-thumb" loading="lazy"></picture>
         </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-computers.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-computers.png" alt="GLPI asset inventory displaying 50 computers with detailed specifications, user assignments, warranty dates, and lifecycle status" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>IT Asset Management</h4>
-            <p>50+ computers, 12 monitors, printers, network gear, and mobile devices — all tracked with specs, assignments, warranty dates, and lifecycle status across 3 locations.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-licenses.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-licenses.png" alt="GLPI software license management dashboard with Office 365, EHR, and healthcare software license tracking" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Software &amp; License Tracking</h4>
-            <p>10 software titles with license counts, assignments, and compliance tracking. Covers Office 365, EHR systems, antivirus, and healthcare-specific applications.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-kb-admin.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-kb-admin.png" alt="GLPI knowledge base with self-service articles for password resets, VPN setup, and HIPAA compliance procedures" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Knowledge Base</h4>
-            <p>10 self-service articles covering password resets, VPN setup, phishing reporting, HIPAA guidelines, and common IT procedures — reducing ticket volume through documentation.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-dashboard.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-dashboard.png" alt="GLPI reporting dashboard displaying ticket volume trends, resolution times, asset distribution, and department workload metrics" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Reporting &amp; Metrics</h4>
-            <p>Built-in dashboards showing ticket volume, resolution times, asset distribution, and department workload — the data that drives IT operations decisions.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-assets.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-assets.png" alt="GLPI network equipment and peripheral asset tracking including printers, monitors, and network devices" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Employee Onboarding Workflow</h4>
-            <p>26-task, 4-phase onboarding ticket for a new clinical hire — covering account creation, equipment provisioning, compliance training, HIPAA certification, and 30-day follow-up.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-change-chg001-full.webp" type="image/webp"><img width="406" height="2000" src="img/screenshots/glpi-change-chg001-full.jpg" alt="GLPI ITIL change management showing formal RFC with Change Advisory Board approval, risk assessment matrix, and post-implementation review" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>ITIL Change Management</h4>
-            <p>5 formal change requests demonstrating the full ITIL change lifecycle: Major change with CAB approval and PIR, emergency firewall rule, standard firmware upgrade, phased EDR deployment, and low-risk feature rollout.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-incident-response.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/glpi-incident-response.png" alt="GLPI NIST Incident Response simulation demonstrating complete IR lifecycle from LockBit ransomware detection through containment, investigation, eradication, recovery, and lessons learned" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Incident Response — NIST IR Lifecycle</h4>
-            <p>Complete ransomware incident simulation across 6 tickets demonstrating NIST IR phases: Detection (CrowdStrike EDR alert with IOCs), Containment (network isolation, credential reset, forensic imaging), Investigation (timeline reconstruction, IOC analysis, MITRE ATT&CK mapping), Eradication (malware removal, system hardening, patch deployment), Recovery (monitored reintroduction to network), and Lessons Learned (post-incident review with Change Request for security improvements). Includes realistic technical details with file hashes, C2 IPs, MITRE techniques, and compliance documentation.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-service-catalog.webp" type="image/webp"><img width="770" height="700" src="img/screenshots/glpi-service-catalog.png" alt="GLPI ITIL service catalog with hierarchical categories for hardware requests, software, access management, and support" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>IT Service Catalog</h4>
-            <p>27 ITIL categories with 6 ticket templates enabling self-service IT requests. Covers hardware procurement, software licensing, EHR access (with HIPAA training verification), VPN provisioning, and employee lifecycle management — complete with SLA targets and approval workflows.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/glpi-service-request.webp" type="image/webp"><img width="770" height="1778" src="img/screenshots/glpi-service-request.png" alt="GLPI EHR access request ticket showing HIPAA compliance verification workflow with training certificate and manager approval" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Cross-System Integration</h4>
-            <p>26 bidirectional references linking GLPI tickets to BookStack knowledge base articles. Ticket solutions reference relevant procedures, KB articles link to real-world examples — demonstrating how an integrated IT ecosystem reduces resolution time and improves knowledge sharing.</p>
-          </div>
-        </div>
-
       </div>
 
       <!-- BookStack IT Knowledge Base Demo -->
@@ -553,20 +471,11 @@
             <h3>BookStack — IT Knowledge Base</h3>
             <p class="demo-subtitle">Documentation · Policies · Procedures · Clinical Systems · DR Planning</p>
             <div class="case-study">
-              <p><strong>The Challenge:</strong> IT support knowledge lived in the heads of individual technicians. When the sole IT person was unavailable, staff had no way to self-serve common issues. New hires took weeks to get up to speed on procedures, and HIPAA compliance documentation was scattered across shared drives with no version control.</p>
+              <p><strong>The Challenge:</strong> IT knowledge lived in one person's head. Staff couldn't self-serve, HIPAA docs were scattered, and new hires took weeks to onboard.</p>
               
-              <p><strong>The Approach:</strong> Selected BookStack for its intuitive Shelves → Books → Chapters → Pages hierarchy, WYSIWYG editing (enabling non-technical staff to contribute), and granular permissions. Organized content by operational domain rather than by department, making documentation discoverable regardless of who's looking.</p>
+              <p><strong>The Solution:</strong> 57 professional articles across 5 domains — Security &amp; Compliance, Help Desk, Onboarding, Infrastructure, and Clinical Systems — with structured headings, callout boxes, and cross-references.</p>
               
-              <p><strong>The Solution:</strong> Built a comprehensive IT knowledge portal with 57 professional-grade articles across 5 knowledge areas: Security &amp; Compliance (14), Help Desk Operations (12), Employee Onboarding (12), Infrastructure &amp; Network (11), and Clinical Systems &amp; EHR (8). Each article includes structured headings, callout boxes, decision tables, and step-by-step procedures.</p>
-              
-              <p><strong>The Results:</strong></p>
-              <ul class="results-list">
-                <li><strong>57 articles</strong> covering 100% of common IT support scenarios</li>
-                <li>Self-service documentation reducing ticket volume for password resets, VPN, and printing issues</li>
-                <li>HIPAA compliance documentation centralized with version history</li>
-                <li>Onboarding time reduced — new IT staff have complete runbooks from day one</li>
-                <li>Public-facing demo requiring zero login — proof of documentation quality</li>
-              </ul>
+              <p><strong>The Results:</strong> <strong>57 articles</strong> covering 100% of common IT scenarios, centralized HIPAA documentation, and self-service reducing ticket volume. Public access — no login required.</p>
             </div>
             <div class="demo-launch">
               <a href="#" class="btn btn-primary btn-lg" id="bookstack-link">Launch Live Demo →</a>
@@ -587,58 +496,16 @@
         </div>
       </div>
 
-      <!-- BookStack Showcase Grid -->
-      <h3 class="showcase-title">What's Inside</h3>
-      <div class="showcase-grid">
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/bookstack-security-shelf.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-security-shelf.png" alt="BookStack Security and Compliance shelf containing 14 articles on HIPAA compliance, PHI handling, breach notification, and incident response procedures" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Security &amp; Compliance</h4>
-            <p>14 articles covering HIPAA compliance, PHI handling, breach notification, security policies, incident response playbooks, and phishing awareness — the regulatory backbone of healthcare IT.</p>
-          </div>
+      <div class="screenshot-album">
+        <button class="album-toggle" onclick="this.parentElement.classList.toggle('expanded')">
+          📸 Screenshots (4) <span class="toggle-arrow">▸</span>
+        </button>
+        <div class="album-strip">
+          <picture><source srcset="img/screenshots/bookstack-shelves.webp" type="image/webp"><img src="img/screenshots/bookstack-shelves.png" alt="Knowledge base shelves overview" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/bookstack-security-shelf.webp" type="image/webp"><img src="img/screenshots/bookstack-security-shelf.png" alt="Security & Compliance shelf" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/bookstack-helpdesk-book.webp" type="image/webp"><img src="img/screenshots/bookstack-helpdesk-book.png" alt="Help Desk procedures" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/bookstack-hipaa-article.webp" type="image/webp"><img src="img/screenshots/bookstack-hipaa-article.png" alt="HIPAA compliance article" class="album-thumb" loading="lazy"></picture>
         </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/bookstack-helpdesk-book.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-helpdesk-book.png" alt="BookStack Help Desk Procedures Manual with ticket triage workflows, escalation matrices, and troubleshooting guides" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Help Desk Operations</h4>
-            <p>12 articles with ticket triage procedures, escalation matrices, SLA guidelines, troubleshooting guides for passwords, networking, printers, VPN, email, and remote support protocols.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/bookstack-hipaa-article.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-hipaa-article.png" alt="BookStack HIPAA overview article showing structured documentation with headings, callout boxes, and compliance checklists" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Rich Documentation</h4>
-            <p>Professional-grade articles with structured headings, callout boxes, decision tables, step-by-step procedures, and cross-references — the kind of documentation that reduces ticket volume.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/bookstack-incident-response.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-incident-response.png" alt="BookStack incident classification framework showing severity levels, response procedures, and escalation paths for security incidents" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Incident Response &amp; DR</h4>
-            <p>Incident classification framework, response procedures by severity, business continuity plans, backup schedules with RPO/RTO targets, and annual disaster recovery testing protocols.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/bookstack-hipaa-book.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-hipaa-book.png" alt="BookStack HIPAA Compliance Guide book displaying chapter organization for healthcare regulatory documentation" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Onboarding &amp; Offboarding</h4>
-            <p>12 articles covering pre-arrival IT checklists, day-one device setup, account provisioning, software installation, security orientation, offboarding procedures, and BYOD policies.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/bookstack-homepage.webp" type="image/webp"><img width="1280" height="900" src="img/screenshots/bookstack-homepage.png" alt="BookStack homepage displaying recent documentation activity, popular books, and knowledge base navigation" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Clinical Systems &amp; EHR</h4>
-            <p>8 articles on IntakeQ EHR support, provider permissions, telehealth troubleshooting, e-prescribing setup, HL7 lab interfaces, and clinical device support — bridging IT and clinical operations.</p>
-          </div>
-        </div>
-
       </div>
 
       <!-- IT Operations Dashboard Demo -->
@@ -649,20 +516,11 @@
             <h3>IT Operations Dashboard — Real-Time NOC Monitoring</h3>
             <p class="demo-subtitle">Ticket Triage · Security Alerts · Asset Tracking · SLA Metrics · Onboarding Workflows</p>
             <div class="case-study">
-              <p><strong>The Challenge:</strong> IT leadership had no real-time visibility into operational health. Ticket backlogs, SLA breaches, and security incidents were discovered reactively. The GLPI interface provided data but required navigating multiple screens — there was no single-pane-of-glass view for IT operations meetings or NOC monitoring.</p>
+              <p><strong>The Challenge:</strong> No real-time visibility into IT ops — ticket backlogs and SLA breaches discovered reactively, no single-pane-of-glass view.</p>
               
-              <p><strong>The Approach:</strong> Built a custom Python/Flask dashboard that connects to the GLPI REST API, pulling live data and presenting it in a dark-theme NOC format designed for wall-mounted displays. Focused on the 8 metrics that matter most for healthcare IT: active tickets, security posture, system health, SLA compliance, asset inventory, team workload, onboarding status, and activity feed.</p>
+              <p><strong>The Solution:</strong> Custom Python/Flask dashboard pulling live GLPI data via REST API. Priority ticket queue, security alerts with threat gauge, system health for 8 services, <strong>93.9% SLA compliance</strong>, and team workload — all in one NOC-style view.</p>
               
-              <p><strong>The Solution:</strong> Real-time operations dashboard with auto-refresh, pulling live data from GLPI via REST API. Features priority ticket queue, security incident alerts with threat gauge, system health monitoring for 8 infrastructure services, <strong>93.9% SLA compliance</strong> tracking, asset inventory visualization, and team workload distribution — all in a single scrollable view.</p>
-              
-              <p><strong>The Results:</strong></p>
-              <ul class="results-list">
-                <li>Single-pane-of-glass for all IT operations metrics</li>
-                <li>Security posture visible at a glance (<strong>13 incident categories</strong> tracked)</li>
-                <li>SLA compliance monitoring with trend analysis</li>
-                <li>Proactive identification of ticket backlogs and workload imbalances</li>
-                <li><strong>Auto-refresh every 60 seconds</strong> — zero manual intervention needed</li>
-              </ul>
+              <p><strong>The Results:</strong> Single dashboard for all IT metrics, <strong>auto-refresh every 60 seconds</strong>, proactive SLA monitoring, and security posture visible at a glance.</p>
             </div>
             <div class="demo-launch">
               <a href="#" class="btn btn-primary btn-lg" id="dashboard-link">Launch Live Demo →</a>
@@ -683,58 +541,16 @@
         </div>
       </div>
 
-      <!-- Dashboard Showcase Grid -->
-      <h3 class="showcase-title">What's Inside</h3>
-      <div class="showcase-grid">
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/dashboard-tickets.webp" type="image/webp"><img width="752" height="705" src="img/screenshots/dashboard-tickets.png" alt="Priority ticket queue panel displaying 9 active IT support tickets with color-coded urgency badges and aging indicators" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Priority Ticket Queue</h4>
-            <p>Real-time view of open tickets sorted by priority and modification date. Color-coded badges (Critical → Low) with aging indicators — what a help desk lead sees at the start of every shift.</p>
-          </div>
+      <div class="screenshot-album">
+        <button class="album-toggle" onclick="this.parentElement.classList.toggle('expanded')">
+          📸 Screenshots (4) <span class="toggle-arrow">▸</span>
+        </button>
+        <div class="album-strip">
+          <picture><source srcset="img/screenshots/dashboard-hero.webp" type="image/webp"><img src="img/screenshots/dashboard-hero.jpg" alt="Full dashboard overview" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/dashboard-tickets.webp" type="image/webp"><img src="img/screenshots/dashboard-tickets.png" alt="Priority ticket queue" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/dashboard-security.webp" type="image/webp"><img src="img/screenshots/dashboard-security.png" alt="Security incident alerts" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/dashboard-sla.webp" type="image/webp"><img src="img/screenshots/dashboard-sla.png" alt="SLA compliance metrics" class="album-thumb" loading="lazy"></picture>
         </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/dashboard-onboarding.webp" type="image/webp"><img width="752" height="505" src="img/screenshots/dashboard-onboarding.png" alt="Employee onboarding tracker showing Dr. Emily Sanchez's clinical onboarding progress with 26-task workflow completion bar" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Onboarding &amp; Offboarding</h4>
-            <p>Tracks active employee lifecycle workflows with progress bars. Currently shows Dr. Emily Sanchez's 26-task clinical onboarding and a completed offboarding — connecting HR processes to IT operations.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/dashboard-security.webp" type="image/webp"><img width="752" height="1197" src="img/screenshots/dashboard-security.png" alt="Security incident alerts panel displaying 13 incidents with severity badges and real-time threat level gauge for HIPAA compliance monitoring" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Security &amp; Incident Alerts</h4>
-            <p>13 security-related incidents including phishing campaigns, stolen equipment, VPN issues, and compliance audits. Includes a real-time threat level gauge — critical for HIPAA-regulated environments.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/dashboard-health.webp" type="image/webp"><img width="752" height="416" src="img/screenshots/dashboard-health.png" alt="System health monitoring grid displaying 8 infrastructure services including GLPI, Active Directory, Exchange, and EHR with live status indicators" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>System Health Monitoring</h4>
-            <p>Live health checks for 8 infrastructure services: GLPI, BookStack, Active Directory, Exchange, VPN, IntakeQ EHR, backup, and print servers — with response times and pulsing status indicators.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/dashboard-sla.webp" type="image/webp"><img width="752" height="488" src="img/screenshots/dashboard-sla.png" alt="SLA performance metrics displaying 93.9% compliance rate, 3.0h average response time, and 30-day trend chart" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>SLA Performance Metrics</h4>
-            <p>93.9% SLA compliance, 3.0h average response time, 9.4h average resolution time — with a 30-day trend chart. The metrics that demonstrate IT is meeting its commitments to the organization.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/dashboard-assets.webp" type="image/webp"><img width="752" height="739" src="img/screenshots/dashboard-assets.png" alt="Asset inventory visualization with interactive doughnut chart showing 140 tracked assets across 7 categories and team workload distribution" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Asset Inventory &amp; Workload</h4>
-            <p>140 tracked assets across 7 categories with interactive doughnut chart, plus team workload distribution showing ticket volume per technician — data-driven resource allocation.</p>
-          </div>
-        </div>
-
       </div>
 
       <!-- TechPrep Pro Demo -->
@@ -745,21 +561,12 @@
             <h3>TechPrep Pro — Interactive Learning Platform</h3>
             <p class="demo-subtitle">Adaptive Quizzes · Spaced Repetition · Ticket Simulator · Exam Mode · Live Integrations</p>
             <div class="case-study">
-              <p><strong>The Challenge:</strong> Preparing for an MSP technical interview requires mastering networking, Active Directory, M365, infrastructure, and help desk operations — too much material for unstructured study.</p>
+              <p><strong>The Challenge:</strong> MSP interview prep requires mastering networking, AD, M365, and help desk — too much for unstructured study.</p>
               
-              <p><strong>The Approach:</strong> Built a full-stack learning platform with database-backed progress tracking, spaced repetition science (SM-2 algorithm), and adaptive quiz difficulty that targets weak areas.</p>
+              <p><strong>The Solution:</strong> Full-stack Next.js 15 learning platform with 468 adaptive quiz items, 28 ticket scenarios, SM-2 spaced repetition flashcards, and live GLPI/BookStack API integrations.</p>
               
-              <p><strong>The Solution:</strong> Next.js 15 app with Prisma ORM, SQLite database, 15 data models. Features include module-based learning with section tracking, multiple quiz modes, flashcard scheduling, ticket triage practice, and achievement system.</p>
-              
-              <p><strong>The Results:</strong></p>
-              <ul class="results-list">
-                <li>468 quiz items seeded with adaptive difficulty paths</li>
-                <li>28 ticket scenarios for realistic MSP help desk practice</li>
-                <li>19 achievements with progress tracking and streaks</li>
-                <li>Real-time demo integration from GLPI + BookStack</li>
-                <li>Deployed via Docker on GCP with Cloudflare tunnel</li>
-              </ul>
-              <p><strong>Tech Tags:</strong> Next.js, Prisma, SQLite, TypeScript, Tailwind CSS, Docker, SM-2, REST API</p>
+              <p><strong>The Results:</strong> Complete study platform with progress tracking, 19 achievements, and real-time demo data. Deployed via Docker on GCP.</p>
+              <p><strong>Tech:</strong> Next.js · Prisma · SQLite · TypeScript · Tailwind · Docker · SM-2 · REST API</p>
             </div>
             <div class="demo-launch">
               <a href="https://techprep.harlenmorris.me" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Launch TechPrep →</a>
@@ -771,58 +578,16 @@
         </div>
       </div>
 
-      <!-- TechPrep Pro Showcase Grid -->
-      <h3 class="showcase-title">What's Inside</h3>
-      <div class="showcase-grid">
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/techprep-modules.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/techprep-modules.png" alt="TechPrep Pro module browser showing 5 study modules with progress rings and topic tags" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Quiz Engine</h4>
-            <p>274 questions across 5 modules with adaptive difficulty that adjusts based on performance.</p>
-          </div>
+      <div class="screenshot-album">
+        <button class="album-toggle" onclick="this.parentElement.classList.toggle('expanded')">
+          📸 Screenshots (4) <span class="toggle-arrow">▸</span>
+        </button>
+        <div class="album-strip">
+          <picture><source srcset="img/screenshots/techprep-dashboard.webp" type="image/webp"><img src="img/screenshots/techprep-dashboard.png" alt="TechPrep dashboard" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/techprep-modules.webp" type="image/webp"><img src="img/screenshots/techprep-modules.png" alt="Study modules" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/techprep-flashcards.webp" type="image/webp"><img src="img/screenshots/techprep-flashcards.png" alt="SM-2 flashcards" class="album-thumb" loading="lazy"></picture>
+          <picture><source srcset="img/screenshots/techprep-simulator.webp" type="image/webp"><img src="img/screenshots/techprep-simulator.png" alt="Ticket simulator" class="album-thumb" loading="lazy"></picture>
         </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/techprep-flashcards.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/techprep-flashcards.png" alt="TechPrep Pro flashcards interface showing spaced repetition scheduling with SM-2 algorithm" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Flashcards (SM-2)</h4>
-            <p>194 spaced repetition cards with interval scheduling driven by the SM-2 algorithm.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/techprep-simulator.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/techprep-simulator.png" alt="TechPrep Pro MSP ticket simulator with realistic help desk scenarios and triage practice" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Ticket Simulator</h4>
-            <p>28 realistic MSP help desk scenarios for triage, troubleshooting, and resolution practice.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/techprep-analytics.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/techprep-analytics.png" alt="TechPrep Pro analytics dashboard with study heatmaps, topic radar chart, and weak area tracking" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Analytics Dashboard</h4>
-            <p>Study heatmaps, radar charts, and weak-area tracking to focus on improvement.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/techprep-exam.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/techprep-exam.png" alt="TechPrep Pro exam mode with configurable timed practice tests and pass thresholds" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Live Demo Integration</h4>
-            <p>Real-time stats pulled from GLPI + BookStack APIs for live system context.</p>
-          </div>
-        </div>
-
-        <div class="showcase-item">
-          <picture><source srcset="img/screenshots/techprep-dashboard.webp" type="image/webp"><img width="1400" height="900" src="img/screenshots/techprep-dashboard.png" alt="TechPrep Pro dashboard overview with study progress, quick actions, and module cards" class="showcase-img" loading="lazy"></picture>
-          <div class="showcase-info">
-            <h4>Exam Mode</h4>
-            <p>Timed practice tests with configurable pass thresholds to simulate certification-style exams.</p>
-          </div>
-        </div>
-
       </div>
 
       <!-- Automation & Scripting Showcase -->
@@ -832,7 +597,7 @@
             <div class="demo-icon-inline">🔧</div>
             <h3>Automation &amp; Scripting Showcase</h3>
             <p class="demo-subtitle">PowerShell · Bash · Python · REST API Integration</p>
-            <p>6 production-ready automation scripts demonstrating real IT workflow automation with live GLPI API integration. Includes user provisioning, backup automation, report generation, and ticket management.</p>
+            <p>6 production-ready scripts with live GLPI API integration — user provisioning, backup automation, report generation, and ticket management.</p>
             <div class="demo-launch">
               <a href="articles/automation-showcase.html" class="btn btn-primary">View Scripts →</a>
             </div>
